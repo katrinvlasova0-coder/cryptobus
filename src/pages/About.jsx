@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import PageHeader from '@/components/site/PageHeader';
-import { Target, Server, ShieldCheck, Globe2, Users, Mail } from 'lucide-react';
+import { Target, Server, ShieldCheck, Globe2, Users, Mail, Building2 } from 'lucide-react';
 import { useLeadModal } from '@/components/LeadModal';
+import { COMPANY } from '@/lib/company';
 
 const SECTIONS = [
   {
@@ -25,14 +26,9 @@ const SECTIONS = [
     body: 'Cross-border business transactions, subject to regulatory and compliance requirements.',
   },
   {
-    icon: Users,
-    title: 'Leadership',
-    body: 'Leadership details will be published once confirmed by the platform administrator.',
-  },
-  {
     icon: Mail,
     title: 'Contact',
-    body: 'Reach our team for corporate inquiries and onboarding support.',
+    body: 'Reach our team for corporate inquiries and onboarding support via the request form on this website.',
   },
 ];
 
@@ -63,6 +59,30 @@ export default function About() {
             </p>
           </div>
         </div>
+
+        <div className="glass rounded-2xl p-8 lg:p-10">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-11 w-11 rounded-xl bg-electric/10 border border-electric/20 flex items-center justify-center">
+              <Building2 className="h-5 w-5 text-electric" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl font-bold">Company & licensing</h2>
+              <p className="text-sm text-muted-foreground">
+                Cryptobus is operated by {COMPANY.legalName}
+              </p>
+            </div>
+          </div>
+          <dl className="grid sm:grid-cols-2 gap-4 text-sm">
+            <Item label="Legal name" value={COMPANY.legalName} />
+            <Item label="Legal form" value={COMPANY.legalForm} />
+            <Item label="Registration number (IČO)" value={COMPANY.ico} />
+            <Item label="License" value={COMPANY.license} />
+            <Item label="Country" value={COMPANY.country} />
+            <Item label="Court registry" value={COMPANY.courtRegistry} />
+            <Item label="Registered address" value={COMPANY.address} className="sm:col-span-2" />
+          </dl>
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SECTIONS.map((s) => (
             <div key={s.title} className="glass rounded-2xl p-6">
@@ -74,6 +94,18 @@ export default function About() {
             </div>
           ))}
         </div>
+
+        <div className="glass rounded-2xl p-8 lg:p-10 border border-dashed border-border">
+          <div className="flex items-center gap-3 mb-3">
+            <Users className="h-5 w-5 text-muted-foreground" />
+            <h2 className="font-display text-xl font-bold">Leadership</h2>
+          </div>
+          <p className="text-sm text-muted-foreground max-w-2xl">
+            Leadership profiles, roles, and LinkedIn links will be published here soon. Content is
+            being prepared and will appear on this page once confirmed.
+          </p>
+        </div>
+
         <div className="text-center">
           <Button
             size="lg"
@@ -87,5 +119,14 @@ export default function About() {
         </div>
       </div>
     </>
+  );
+}
+
+function Item({ label, value, className = '' }) {
+  return (
+    <div className={`rounded-xl border border-border bg-card/40 p-4 ${className}`}>
+      <dt className="text-xs uppercase tracking-wider text-muted-foreground mb-1">{label}</dt>
+      <dd className="text-foreground font-medium leading-relaxed">{value}</dd>
+    </div>
   );
 }

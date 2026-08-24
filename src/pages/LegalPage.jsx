@@ -1,5 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import PageHeader from '@/components/site/PageHeader';
+import { COMPANY } from '@/lib/company';
+
+const OPERATOR = `${COMPANY.legalName} (IČO ${COMPANY.ico}), ${COMPANY.address}, registered with the ${COMPANY.courtRegistry}. ${COMPANY.licenseNote}.`;
 
 const DOCS = {
   terms: {
@@ -7,35 +10,39 @@ const DOCS = {
     sections: [
       {
         title: '1. Agreement',
-        text: 'These Terms of Service govern access to and use of the Cryptobus website and related marketing materials operated under cryp2bus.com. By using the site, you agree to these Terms.',
+        text: `These Terms of Service govern access to and use of the Cryptobus website and related marketing materials operated under ${COMPANY.domain} by ${COMPANY.legalName}. By using the site, you agree to these Terms.`,
       },
       {
-        title: '2. Nature of the service',
+        title: '2. Operator',
+        text: OPERATOR,
+      },
+      {
+        title: '3. Nature of the service',
         text: 'This website presents information about Cryptobus B2B crypto transaction infrastructure. Availability of any product or service is subject to KYB/KYC, AML checks, and applicable regulatory requirements. Nothing on this site constitutes an offer to the public in a restricted jurisdiction.',
       },
       {
-        title: '3. Lead requests',
+        title: '4. Lead requests',
         text: 'By submitting a contact or account request form, you confirm that the information provided is accurate and that you are authorized to act on behalf of the stated company where applicable.',
       },
       {
-        title: '4. No investment advice',
+        title: '5. No investment advice',
         text: 'Cryptobus does not provide investment, legal, or tax advice. Crypto assets are volatile. You are solely responsible for assessing suitability for your business.',
       },
       {
-        title: '5. Intellectual property',
-        text: 'All trademarks, logos, and content on this site are owned by Cryptobus or its licensors and may not be used without prior written permission.',
+        title: '6. Intellectual property',
+        text: 'All trademarks, logos, and content on this site are owned by Cryptobus / Teleport financial services s.r.o. or its licensors and may not be used without prior written permission.',
       },
       {
-        title: '6. Limitation of liability',
-        text: 'To the maximum extent permitted by law, Cryptobus is not liable for indirect, incidental, or consequential damages arising from use of this website or reliance on its content.',
+        title: '7. Limitation of liability',
+        text: 'To the maximum extent permitted by law, Cryptobus and Teleport financial services s.r.o. are not liable for indirect, incidental, or consequential damages arising from use of this website or reliance on its content.',
       },
       {
-        title: '7. Changes',
+        title: '8. Changes',
         text: 'We may update these Terms from time to time. The version published on this page is the current version.',
       },
       {
-        title: '8. Contact',
-        text: 'For questions about these Terms, contact us via the request form on this website or the contact details published once confirmed by the platform operator.',
+        title: '9. Contact',
+        text: `For questions about these Terms, contact us via the request form on this website. Operator: ${COMPANY.legalName}, ${COMPANY.address}.`,
       },
     ],
   },
@@ -44,7 +51,7 @@ const DOCS = {
     sections: [
       {
         title: '1. Controller',
-        text: 'Cryptobus (website cryp2bus.com) processes personal data submitted through lead forms and collected via necessary cookies as described in this Policy.',
+        text: `The data controller for Cryptobus (${COMPANY.domain}) is ${OPERATOR} Personal data submitted through lead forms and collected via necessary cookies is processed as described in this Policy.`,
       },
       {
         title: '2. Data we collect',
@@ -80,7 +87,7 @@ const DOCS = {
       },
       {
         title: '10. Contact',
-        text: 'To exercise privacy rights, use the contact form on this site or the privacy contact address once published by the platform operator.',
+        text: `To exercise privacy rights, use the contact form on this site. Controller: ${COMPANY.legalName}, IČO ${COMPANY.ico}, ${COMPANY.address}.`,
       },
     ],
   },
@@ -89,7 +96,7 @@ const DOCS = {
     sections: [
       {
         title: '1. Overview',
-        text: 'Cryptobus applies anti-money-laundering (AML) controls consistent with a B2B crypto settlement model. Clients are expected to use the platform only for legitimate corporate purposes.',
+        text: `Cryptobus, operated by ${COMPANY.legalName} under a CASP license in the Czech Republic, applies anti-money-laundering (AML) controls consistent with a B2B crypto settlement model. Clients are expected to use the platform only for legitimate corporate purposes.`,
       },
       {
         title: '2. Customer due diligence',
@@ -214,7 +221,7 @@ const DOCS = {
       },
       {
         title: '4. Escalation',
-        text: 'Where required by law, you may also have the right to escalate to a competent authority or dispute-resolution body in your jurisdiction.',
+        text: `Where required by law, you may also have the right to escalate to a competent authority or dispute-resolution body in your jurisdiction, including in the Czech Republic where ${COMPANY.legalName} is registered.`,
       },
     ],
   },
@@ -237,7 +244,11 @@ export default function LegalPage() {
 
   return (
     <>
-      <PageHeader eyebrow="Legal" title={doc.title} subtitle="Cryptobus · cryp2bus.com" />
+      <PageHeader
+        eyebrow="Legal"
+        title={doc.title}
+        subtitle={`${COMPANY.brand} · ${COMPANY.domain} · ${COMPANY.legalName}`}
+      />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 space-y-8">
         <p className="text-xs text-muted-foreground">Last updated: 24 August 2026</p>
         {doc.sections.map((s) => (

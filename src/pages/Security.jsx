@@ -18,8 +18,16 @@ const SECTIONS = [
 export default function Security() {
   return (
     <>
-      <PageHeader eyebrow="Security & Compliance" title="Security & Compliance" subtitle="Cryptobus is built around corporate compliance. We do not advertise licenses, banking partners, insurance, or regulatory approvals unless confirmed by the platform administrator." />
+      <PageHeader eyebrow="Security & Compliance" title="Security & Compliance" subtitle="Cryptobus is built around corporate compliance and operated under a Czech CASP license via Teleport financial services s.r.o." />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="glass rounded-2xl p-6 mb-8 text-sm text-muted-foreground leading-relaxed">
+          <p className="font-medium text-foreground mb-2">Regulatory status</p>
+          <p>
+            Cryptobus is operated by <span className="text-foreground">Teleport financial services s.r.o.</span> (IČO 21369909),
+            registered at Cimburkova 916/8, Žižkov, 130 00 Prague 3, Czech Republic, and entered in the Commercial Register
+            kept by the Municipal Court in Prague. The company holds a <span className="text-foreground">CASP (Crypto-Asset Service Provider)</span> license.
+          </p>
+        </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SECTIONS.map((s) => (
             <div key={s.title} className="glass rounded-2xl p-6">

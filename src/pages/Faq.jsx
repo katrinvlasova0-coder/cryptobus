@@ -8,7 +8,7 @@ const FAQS = [
   { q: "Who can open an account?", a: "Corporate clients. Every business completes KYB verification, and directors and UBOs complete required identity checks." },
   { q: "How do I buy crypto?", a: "Open an account, complete KYB, select your currency and crypto asset, receive a live quote, transfer funds, and receive crypto to your approved wallet." },
   { q: "How do invoice payments work?", a: "Upload your invoice, enter beneficiary details, choose a settlement method, and Cryptobus performs compliance checks before executing the approved settlement." },
-  { q: "Is Cryptobus licensed or regulated?", a: "Any statements about licensing, regulation, banking partners, or insurance will appear on this site only after being confirmed by the platform administrator." },
+  { q: "Is Cryptobus licensed or regulated?", a: "Cryptobus is operated by Teleport financial services s.r.o. (IČO 21369909), a Czech limited liability company registered with the Municipal Court in Prague, holding a CASP (Crypto-Asset Service Provider) license. Availability of services remains subject to KYB/AML and jurisdictional requirements." },
   { q: "Which countries are supported?", a: "Availability depends on regulatory and compliance requirements. See our Global Coverage section for supported, restricted, and coming-soon jurisdictions." },
   { q: "Do you support large OTC transactions?", a: "Yes. Our OTC desk handles large corporate crypto transactions with tailored quotes and settlement." }
 ];

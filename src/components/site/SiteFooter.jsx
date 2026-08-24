@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLeadModal } from '@/components/LeadModal';
+import { COMPANY, companyFooterLine } from '@/lib/company';
 
 const COLS = [
   {
@@ -117,13 +118,18 @@ export default function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Cryptobus. All rights reserved.
-          </p>
-          <p className="text-xs text-muted-foreground max-w-2xl text-center sm:text-right">
-            Cryptobus provides crypto transaction infrastructure for businesses. All corporate
-            clients complete KYB. Availability depends on regulatory and compliance requirements.
+        <div className="mt-12 pt-8 border-t border-border flex flex-col gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} {COMPANY.brand}. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground max-w-2xl text-center sm:text-right">
+              Cryptobus provides crypto transaction infrastructure for businesses. Operated by{' '}
+              {COMPANY.legalName} under a CASP license. All corporate clients complete KYB.
+            </p>
+          </div>
+          <p className="text-[11px] text-muted-foreground/80 text-center sm:text-left">
+            {companyFooterLine()} · {COMPANY.courtRegistry}
           </p>
         </div>
       </div>
