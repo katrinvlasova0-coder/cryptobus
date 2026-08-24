@@ -19,7 +19,7 @@ export function useMarketData(intervalMs = 60000) {
 
   const load = useCallback(async () => {
     setData({
-      status: 'live',
+      status: 'ok',
       pairs: INDICATIVE_PAIRS,
       updated_at: new Date().toISOString(),
       source: 'indicative',

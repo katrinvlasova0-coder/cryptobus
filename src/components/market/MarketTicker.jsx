@@ -9,9 +9,11 @@ function timeUtc(iso) {
 export default function MarketTicker() {
   const { data, loading } = useMarketData(60000);
   const pairs = data?.pairs || [];
-  const isLive = data?.status === "live" && pairs.length > 0;
+  const hasPairs = pairs.length > 0;
+  const isIndicative = data?.source === "indicative";
+  const isLive = data?.status === "live" && hasPairs && !isIndicative;
 
-  const items = isLive ? pairs : [];
+  const items = hasPairs ? pairs : [];
 
   return (
     <div className="border-y border-border bg-card/40 overflow-hidden">
@@ -21,13 +23,13 @@ export default function MarketTicker() {
             <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 ${isLive ? "animate-ping bg-success" : "bg-muted-foreground"}`}></span>
             <span className={`relative inline-flex rounded-full h-2 w-2 ${isLive ? "bg-success" : "bg-muted-foreground"}`}></span>
           </span>
-          <span className="text-xs font-semibold tracking-wider">{isLive ? "LIVE" : "OFFLINE"}</span>
+          <span className="text-xs font-semibold tracking-wider">{isLive ? "LIVE" : isIndicative ? "INDICATIVE" : "OFFLINE"}</span>
         </div>
 
         <div className="flex-1 overflow-hidden relative">
           {loading && !data ? (
             <div className="text-xs text-muted-foreground">Loading market data…</div>
-          ) : isLive ? (
+          ) : hasPairs ? (
             <div className="flex gap-8 marquee-track whitespace-nowrap">
               {[...items, ...items].map((p, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm">

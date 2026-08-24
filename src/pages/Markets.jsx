@@ -6,11 +6,11 @@ import { useMarketData, formatPrice, formatChange } from "@/lib/useMarketData";
 export default function Markets() {
   const { data, loading } = useMarketData(60000);
   const pairs = data?.pairs || [];
-  const isLive = data?.status === "live" && pairs.length > 0;
+  const hasPairs = pairs.length > 0;
 
   return (
     <>
-      <PageHeader eyebrow="Markets" title="Live Markets" subtitle="Reference rates sourced from live market data. Indicative for RFQ execution." />
+      <PageHeader eyebrow="Markets" title="Live Markets" subtitle="Reference rates sourced from market data feeds when available. Indicative for RFQ execution." />
       <MarketTicker />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-12">
         <LiquidityBoard />
@@ -18,7 +18,7 @@ export default function Markets() {
           <div className="px-5 py-4 border-b border-border"><h3 className="font-display text-lg font-semibold">All Pairs</h3></div>
           {loading && !data ? (
             <div className="p-10 text-center text-sm text-muted-foreground">Loading…</div>
-          ) : isLive ? (
+          ) : hasPairs ? (
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead><tr className="text-left text-xs uppercase tracking-wider text-muted-foreground border-b border-border">
