@@ -15,7 +15,7 @@ export default function HeroCalculator() {
   const [payAmount, setPayAmount] = useState(50000);
 
   const pairs = data?.pairs || [];
-  const isLive = data?.status === "live";
+  const isLive = Boolean(pairs.length);
 
   const rate = useMemo(() => {
     const direct = pairs.find((p) => p.pair === `${asset}/${payCurrency}`);

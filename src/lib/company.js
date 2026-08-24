@@ -10,9 +10,19 @@ export const COMPANY = {
   country: 'Czech Republic',
   address: 'Cimburkova 916/8, Žižkov, 130 00 Prague 3, Czech Republic',
   courtRegistry: 'Municipal Court in Prague',
-  contactEmailPlaceholder: null, // publish when confirmed
+  email: 'Hello@cryp2bus.com',
+  phone: '+48573569975',
+  phoneDisplay: '+48 573 569 975',
 };
 
 export function companyFooterLine() {
   return `${COMPANY.legalName} · IČO ${COMPANY.ico} · ${COMPANY.address}`;
+}
+
+export function mailtoHref() {
+  return `mailto:${COMPANY.email}`;
+}
+
+export function telHref() {
+  return `tel:${COMPANY.phone.replace(/\s+/g, '')}`;
 }

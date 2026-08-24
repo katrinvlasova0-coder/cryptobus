@@ -28,7 +28,7 @@ const SECTIONS = [
   {
     icon: Mail,
     title: 'Contact',
-    body: 'Reach our team for corporate inquiries and onboarding support via the request form on this website.',
+    body: `Email ${COMPANY.email} or call ${COMPANY.phoneDisplay}. You can also use the request form on this website.`,
   },
 ];
 
@@ -42,8 +42,8 @@ export default function About() {
         title="Built for Businesses That Need Crypto Infrastructure"
         subtitle="Not another retail trading app."
       />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-16">
-        <div className="glass rounded-2xl p-8 lg:p-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-12 sm:space-y-16">
+        <div className="glass rounded-2xl p-6 sm:p-8 lg:p-10">
           <h2 className="font-display text-2xl font-bold mb-4">The problem we solve</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
@@ -80,6 +80,22 @@ export default function About() {
             <Item label="Country" value={COMPANY.country} />
             <Item label="Court registry" value={COMPANY.courtRegistry} />
             <Item label="Registered address" value={COMPANY.address} className="sm:col-span-2" />
+            <Item
+              label="Email"
+              value={
+                <a href={`mailto:${COMPANY.email}`} className="text-electric hover:underline">
+                  {COMPANY.email}
+                </a>
+              }
+            />
+            <Item
+              label="Phone"
+              value={
+                <a href={`tel:${COMPANY.phone}`} className="text-electric hover:underline">
+                  {COMPANY.phoneDisplay}
+                </a>
+              }
+            />
           </dl>
         </div>
 

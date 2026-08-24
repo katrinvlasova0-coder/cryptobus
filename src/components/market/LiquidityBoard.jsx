@@ -8,7 +8,7 @@ export default function LiquidityBoard() {
   const [active, setActive] = useState("BTC/USD");
 
   const pairs = data?.pairs || [];
-  const isLive = data?.status === "live" && pairs.length > 0;
+  const isLive = Boolean(data?.pairs?.length);
 
   const current = useMemo(() => pairs.find((p) => p.pair === active), [pairs, active]);
   const mid = current?.price ?? null;

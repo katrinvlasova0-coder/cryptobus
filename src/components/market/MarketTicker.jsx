@@ -11,19 +11,19 @@ export default function MarketTicker() {
   const pairs = data?.pairs || [];
   const hasPairs = pairs.length > 0;
   const isIndicative = data?.source === "indicative";
-  const isLive = data?.status === "live" && hasPairs && !isIndicative;
+  const isLive = data?.source === "coingecko" && hasPairs;
 
   const items = hasPairs ? pairs : [];
 
   return (
     <div className="border-y border-border bg-card/40 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-4 h-12">
-        <div className="flex items-center gap-2 shrink-0 pr-4 border-r border-border">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-3 sm:gap-4 h-11 sm:h-12">
+        <div className="flex items-center gap-2 shrink-0 pr-3 sm:pr-4 border-r border-border">
           <span className="relative flex h-2 w-2">
             <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 ${isLive ? "animate-ping bg-success" : "bg-muted-foreground"}`}></span>
             <span className={`relative inline-flex rounded-full h-2 w-2 ${isLive ? "bg-success" : "bg-muted-foreground"}`}></span>
           </span>
-          <span className="text-xs font-semibold tracking-wider">{isLive ? "LIVE" : isIndicative ? "INDICATIVE" : "OFFLINE"}</span>
+          <span className="text-[10px] sm:text-xs font-semibold tracking-wider">{isLive ? "LIVE" : isIndicative ? "INDICATIVE" : "OFFLINE"}</span>
         </div>
 
         <div className="flex-1 overflow-hidden relative">

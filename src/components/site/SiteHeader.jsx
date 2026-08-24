@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLeadModal } from '@/components/LeadModal';
+import BrandLogo from '@/components/site/BrandLogo';
 
 const NAV = [
   { label: 'Exchange', to: '/exchange' },
@@ -34,24 +35,15 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 glass-strong border-b border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="relative h-8 w-8 rounded-lg bg-gradient-to-br from-electric to-teal flex items-center justify-center">
-              <div className="absolute inset-0.5 rounded-md bg-graphite flex items-center justify-center">
-                <span className="font-display font-bold text-sm text-electric">C</span>
-              </div>
-            </div>
-            <span className="font-display text-lg font-bold tracking-tight">
-              CRYPTO<span className="text-electric">BUS</span>
-            </span>
-          </Link>
+        <div className="flex h-14 sm:h-16 items-center justify-between gap-3">
+          <BrandLogo markClassName="h-8 w-8 sm:h-9 sm:w-9" />
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {NAV.map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
-                className={`px-3 py-2 text-[13px] font-medium rounded-md transition-colors ${
+                className={`px-2.5 py-2 text-[13px] font-medium rounded-md transition-colors whitespace-nowrap ${
                   pathname === n.to
                     ? 'text-foreground bg-secondary'
                     : 'text-muted-foreground hover:text-foreground hover:bg-secondary/60'
@@ -62,7 +54,7 @@ export default function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2 shrink-0">
             <Button
               variant="ghost"
               size="sm"
@@ -76,12 +68,20 @@ export default function SiteHeader() {
               className="bg-electric hover:bg-electric/90 text-graphite font-semibold glow-electric"
               onClick={openAccount}
             >
-              Open Business Account
+              <span className="hidden lg:inline">Open Business Account</span>
+              <span className="lg:hidden">Open Account</span>
             </Button>
+            <button
+              className="xl:hidden p-2 text-foreground"
+              onClick={() => setOpen(!open)}
+              aria-label="Menu"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
 
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground -mr-1"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
@@ -91,7 +91,7 @@ export default function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-card/95 backdrop-blur-xl">
+        <div className="xl:hidden border-t border-border bg-card/95 backdrop-blur-xl max-h-[calc(100dvh-3.5rem)] overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
             {NAV.map((n) => (
               <Link
@@ -103,7 +103,7 @@ export default function SiteHeader() {
                 {n.label}
               </Link>
             ))}
-            <div className="pt-3 flex flex-col gap-2 border-t border-border mt-3">
+            <div className="pt-3 flex flex-col gap-2 border-t border-border mt-3 md:hidden">
               <Button variant="outline" className="w-full" onClick={contact}>
                 Contact
               </Button>

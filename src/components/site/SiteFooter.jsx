@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { Mail, Phone } from 'lucide-react';
 import { useLeadModal } from '@/components/LeadModal';
-import { COMPANY, companyFooterLine } from '@/lib/company';
+import BrandLogo from '@/components/site/BrandLogo';
+import { COMPANY, companyFooterLine, mailtoHref, telHref } from '@/lib/company';
 
 const COLS = [
   {
@@ -42,19 +44,28 @@ export default function SiteFooter() {
 
   return (
     <footer className="border-t border-border bg-graphite/80">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid gap-10 lg:grid-cols-5">
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-electric to-teal flex items-center justify-center">
-                <span className="font-display font-bold text-sm text-graphite">C</span>
-              </div>
-              <span className="font-display text-lg font-bold">
-                CRYPTO<span className="text-electric">BUS</span>
-              </span>
-            </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <BrandLogo className="mb-4" />
             <p className="text-sm text-foreground font-medium leading-relaxed">Crypto for Business.</p>
             <p className="text-sm text-muted-foreground mt-1">Pay an invoice. Get crypto.</p>
+            <div className="mt-4 space-y-2 text-sm">
+              <a
+                href={mailtoHref()}
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors break-all"
+              >
+                <Mail className="h-3.5 w-3.5 shrink-0 text-electric" />
+                {COMPANY.email}
+              </a>
+              <a
+                href={telHref()}
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5 shrink-0 text-electric" />
+                {COMPANY.phoneDisplay}
+              </a>
+            </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {['Trust', 'Liquidity', 'Speed', 'Compliance'].map((t) => (
                 <span
@@ -98,7 +109,7 @@ export default function SiteFooter() {
                   }
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Contact
+                  Contact form
                 </button>
               </li>
               <li>
@@ -128,7 +139,7 @@ export default function SiteFooter() {
               {COMPANY.legalName} under a CASP license. All corporate clients complete KYB.
             </p>
           </div>
-          <p className="text-[11px] text-muted-foreground/80 text-center sm:text-left">
+          <p className="text-[11px] text-muted-foreground/80 text-center sm:text-left leading-relaxed">
             {companyFooterLine()} · {COMPANY.courtRegistry}
           </p>
         </div>

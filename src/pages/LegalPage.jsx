@@ -42,7 +42,7 @@ const DOCS = {
       },
       {
         title: '9. Contact',
-        text: `For questions about these Terms, contact us via the request form on this website. Operator: ${COMPANY.legalName}, ${COMPANY.address}.`,
+        text: `For questions about these Terms, contact us at ${COMPANY.email} or ${COMPANY.phoneDisplay}, or via the request form on this website. Operator: ${COMPANY.legalName}, ${COMPANY.address}.`,
       },
     ],
   },
@@ -87,7 +87,7 @@ const DOCS = {
       },
       {
         title: '10. Contact',
-        text: `To exercise privacy rights, use the contact form on this site. Controller: ${COMPANY.legalName}, IČO ${COMPANY.ico}, ${COMPANY.address}.`,
+        text: `To exercise privacy rights, email ${COMPANY.email} or use the contact form on this site. Controller: ${COMPANY.legalName}, IČO ${COMPANY.ico}, ${COMPANY.address}.`,
       },
     ],
   },

@@ -9,19 +9,19 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-14 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-28">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/60 text-xs text-muted-foreground mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/60 text-xs text-muted-foreground mb-5 sm:mb-6">
               <span className="h-1.5 w-1.5 rounded-full bg-success animate-pulse-live" />
               Cryptobus — Crypto for Business
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
+            <h1 className="font-display text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl font-bold tracking-tight sm:leading-[1.05]">
               PAY AN INVOICE.
               <br />
               <span className="text-gradient">GET CRYPTO.</span>
             </h1>
-            <p className="mt-5 text-lg text-muted-foreground max-w-lg">
+            <p className="mt-4 sm:mt-5 text-base sm:text-lg text-muted-foreground max-w-lg">
               Buy crypto. Pay invoices. Settle globally. One platform — built for businesses that
               need corporate crypto infrastructure, not another retail trading app.
             </p>
@@ -29,18 +29,18 @@ export default function HeroSection() {
               Cryptobus provides businesses with a simple way to execute corporate crypto
               transactions and international settlements through a secure B2B infrastructure.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-electric hover:bg-electric/90 text-graphite font-semibold glow-electric"
+                className="w-full sm:w-auto bg-electric hover:bg-electric/90 text-graphite font-semibold glow-electric"
                 onClick={() =>
                   openLeadModal({ source: 'hero-open-account', title: 'Open Business Account' })
                 }
               >
                 Open Business Account
               </Button>
-              <Link to="/how-it-works">
-                <Button size="lg" variant="outline">
+              <Link to="/how-it-works" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full">
                   How It Works
                 </Button>
               </Link>

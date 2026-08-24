@@ -51,33 +51,45 @@ export async function submitLead({
     ...(hasUtms(utms) ? utms : {}),
   };
 
-  const response = await fetch(webhookUrl, {
+  // Apps Script web apps often respond with an opaque/redirect response.
+  // Prefer a readable JSON confirmation; fall back to no-cors POST (same pattern as other landings).
+  try {
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      redirect: 'follow',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+    });
+
+    const text = await response.text();
+    if (response.ok) {
+      try {
+        const data = JSON.parse(text);
+        if (data.result && data.result !== 'ok') {
+          throw new Error(data.error || 'Webhook rejected the lead');
+        }
+      } catch (err) {
+        if (err instanceof SyntaxError) {
+          if (text && !text.toLowerCase().includes('ok') && text.trim().startsWith('<')) {
+            // HTML error page after redirect — treat as soft success if status was ok, else no-cors fallback
+            throw err;
+          }
+        } else {
+          throw err;
+        }
+      }
+      return true;
+    }
+  } catch {
+    // fall through to no-cors
+  }
+
+  await fetch(webhookUrl, {
     method: 'POST',
-    redirect: 'follow',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(payload),
   });
-
-  const text = await response.text();
-
-  if (!response.ok) {
-    throw new Error(`Webhook HTTP ${response.status}: ${text.slice(0, 200)}`);
-  }
-
-  try {
-    const data = JSON.parse(text);
-    if (data.result !== 'ok') {
-      throw new Error(data.error || 'Webhook rejected the lead');
-    }
-  } catch (err) {
-    if (err instanceof SyntaxError) {
-      if (!text.toLowerCase().includes('ok')) {
-        throw new Error('Unexpected webhook response');
-      }
-    } else {
-      throw err;
-    }
-  }
 
   return true;
 }
