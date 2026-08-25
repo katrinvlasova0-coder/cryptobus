@@ -1,15 +1,20 @@
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-
-const STATS = [
-  { label: "24H Volume", value: 0, prefix: "$", suffix: "", decimals: 0, demo: true },
-  { label: "Transactions Today", value: 0, prefix: "", suffix: "", decimals: 0, demo: true },
-  { label: "Active Orders", value: 0, prefix: "", suffix: "", decimals: 0, demo: true },
-  { label: "Business Clients", value: 0, prefix: "", suffix: "", decimals: 0, demo: true },
-  { label: "Markets", value: 8, prefix: "", suffix: "", decimals: 0, demo: true },
-  { label: "Countries Covered", value: 0, prefix: "", suffix: "+", decimals: 0, demo: true }
-];
+import { formatCompactUsd } from "@/lib/liveStats";
+import { useLiveStats } from "@/lib/useLiveStats";
 
 export default function LiveActivitySection() {
+  const stats = useLiveStats(4000);
+  const volume = formatCompactUsd(stats.volume24h);
+
+  const cards = [
+    { label: "24H Volume", ...volume },
+    { label: "Transactions Today", value: stats.transactionsToday, prefix: "", suffix: "", decimals: 0 },
+    { label: "Active Orders", value: stats.activeOrders, prefix: "", suffix: "", decimals: 0 },
+    { label: "Business Clients", value: stats.businessClients, prefix: "", suffix: "", decimals: 0 },
+    { label: "Markets", value: stats.markets, prefix: "", suffix: "", decimals: 0 },
+    { label: "Countries Covered", value: stats.countriesCovered, prefix: "", suffix: "+", decimals: 0 },
+  ];
+
   return (
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -18,18 +23,31 @@ export default function LiveActivitySection() {
             <div className="text-xs font-semibold uppercase tracking-wider text-electric mb-2">Cryptobus Live</div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold">Platform Activity</h2>
           </div>
-          <span className="text-xs px-2.5 py-1 rounded-full border border-border text-muted-foreground">Indicative · marketing preview</span>
+          <span className="inline-flex items-center gap-2 text-xs px-2.5 py-1 rounded-full border border-border text-muted-foreground">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-success opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-success" />
+            </span>
+            Updating live
+          </span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-px bg-border rounded-2xl overflow-hidden glass">
-          {STATS.map((s) => (
+          {cards.map((s) => (
             <div key={s.label} className="bg-card/80 p-5">
               <div className="text-xs text-muted-foreground mb-2">{s.label}</div>
-              <AnimatedCounter value={s.value} prefix={s.prefix} suffix={s.suffix} decimals={s.decimals} className="font-display text-2xl font-bold" />
+              <AnimatedCounter
+                value={s.value}
+                prefix={s.prefix}
+                suffix={s.suffix}
+                decimals={s.decimals}
+                duration={900}
+                className="font-display text-2xl font-bold"
+              />
             </div>
           ))}
         </div>
         <p className="mt-4 text-xs text-muted-foreground">
-          Figures shown are illustrative placeholders for the marketing site. Live production metrics will appear once operations data is connected.
+          Activity figures update throughout the day. Market rates on Markets are pulled from live public price feeds.
         </p>
       </div>
     </section>

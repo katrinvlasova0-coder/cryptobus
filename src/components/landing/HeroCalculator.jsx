@@ -8,7 +8,7 @@ const FIAT = ["EUR", "USD", "GBP", "CHF"];
 const CRYPTO = ["BTC", "ETH", "USDT", "USDC"];
 
 export default function HeroCalculator() {
-  const { data } = useMarketData(60000);
+  const { data } = useMarketData(90000);
   const [mode, setMode] = useState("crypto");
   const [payCurrency, setPayCurrency] = useState("EUR");
   const [asset, setAsset] = useState("BTC");

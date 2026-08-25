@@ -4,7 +4,7 @@ import LiquidityBoard from "@/components/market/LiquidityBoard";
 import { useMarketData, formatPrice, formatChange } from "@/lib/useMarketData";
 
 export default function Markets() {
-  const { data, loading } = useMarketData(60000);
+  const { data, loading } = useMarketData(90000);
   const pairs = data?.pairs || [];
   const hasPairs = pairs.length > 0;
 

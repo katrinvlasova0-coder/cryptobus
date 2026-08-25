@@ -7,11 +7,11 @@ function timeUtc(iso) {
 }
 
 export default function MarketTicker() {
-  const { data, loading } = useMarketData(60000);
+  const { data, loading } = useMarketData(90000);
   const pairs = data?.pairs || [];
   const hasPairs = pairs.length > 0;
   const isIndicative = data?.source === "indicative";
-  const isLive = data?.source === "coingecko" && hasPairs;
+  const isLive = (data?.source === "binance" || data?.source === "coingecko") && hasPairs;
 
   const items = hasPairs ? pairs : [];
 

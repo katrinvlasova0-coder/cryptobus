@@ -4,7 +4,7 @@ import { useMarketData, formatPrice, formatChange } from "@/lib/useMarketData";
 const PAIRS = ["BTC/USD", "ETH/USD", "SOL/USD", "XRP/USD", "USDT/USD"];
 
 export default function LiquidityBoard() {
-  const { data } = useMarketData(60000);
+  const { data } = useMarketData(90000);
   const [active, setActive] = useState("BTC/USD");
 
   const pairs = data?.pairs || [];
