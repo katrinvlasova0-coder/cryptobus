@@ -15,7 +15,7 @@
     "format": "Howto",
     "category": "Invoice Settlement",
     "unsplashQuery": "business invoice payment desk laptop",
-    "status": "published",
+    "status": "completed",
     "priority": "high",
     "searchVolDe": 1900,
     "kd": 24,
@@ -26,7 +26,8 @@
       "ops"
     ],
     "plannedDate": "2026-09-08",
-    "language": "EN"
+    "language": "EN",
+    "completedAt": "2026-09-08"
   },
   {
     "id": 3,
@@ -44,7 +45,7 @@
     "format": "Explainer",
     "category": "Corporate Treasury",
     "unsplashQuery": "corporate treasury office screens",
-    "status": "published",
+    "status": "completed",
     "priority": "high",
     "searchVolDe": 1200,
     "kd": 26,
@@ -55,7 +56,8 @@
       "compliance"
     ],
     "plannedDate": "2026-09-12",
-    "language": "EN"
+    "language": "EN",
+    "completedAt": "2026-09-12"
   },
   {
     "id": 5,
@@ -73,7 +75,7 @@
     "format": "Comparison",
     "category": "Cross-border Payments",
     "unsplashQuery": "global shipping containers logistics",
-    "status": "published",
+    "status": "completed",
     "priority": "high",
     "searchVolDe": 2100,
     "kd": 28,
@@ -84,7 +86,8 @@
       "finance"
     ],
     "plannedDate": "2026-09-16",
-    "language": "EN"
+    "language": "EN",
+    "completedAt": "2026-09-16"
   },
   {
     "id": 7,
@@ -102,7 +105,7 @@
     "format": "Howto",
     "category": "Compliance",
     "unsplashQuery": "compliance checklist office documents",
-    "status": "published",
+    "status": "completed",
     "priority": "high",
     "searchVolDe": 1100,
     "kd": 21,
@@ -113,7 +116,8 @@
       "founders"
     ],
     "plannedDate": "2026-09-20",
-    "language": "EN"
+    "language": "EN",
+    "completedAt": "2026-09-20"
   },
   {
     "id": 9,
@@ -131,7 +135,7 @@
     "format": "Checklist",
     "category": "Ops Playbooks",
     "unsplashQuery": "accountant laptop spreadsheet office",
-    "status": "published",
+    "status": "completed",
     "priority": "medium",
     "searchVolDe": 700,
     "kd": 17,
@@ -142,7 +146,8 @@
       "finance"
     ],
     "plannedDate": "2026-09-24",
-    "language": "EN"
+    "language": "EN",
+    "completedAt": "2026-09-24"
   },
   {
     "id": 15,
@@ -160,7 +165,7 @@
     "format": "Checklist",
     "category": "Ops Playbooks",
     "unsplashQuery": "project checklist sticky notes",
-    "status": "published",
+    "status": "completed",
     "priority": "high",
     "searchVolDe": 950,
     "kd": 20,
@@ -171,6 +176,7 @@
       "ops"
     ],
     "plannedDate": "2026-10-06",
-    "language": "EN"
+    "language": "EN",
+    "completedAt": "2026-10-06"
   }
 ]
