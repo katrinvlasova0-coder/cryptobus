@@ -1,0 +1,406 @@
+[
+  {
+    "id": 2,
+    "cluster": "Invoice Settlement",
+    "slug": "usdc-vs-usdt-for-supplier-payments",
+    "titleDe": "USDC vs USDT for supplier payments: what finance teams compare",
+    "titleEn": "USDC vs USDT for supplier payments: what finance teams compare",
+    "keywordDe": "USDC vs USDT business payments",
+    "keywordEn": "USDC vs USDT business payments",
+    "lsiKeywords": [
+      "stablecoin choice",
+      "supplier crypto payment",
+      "invoice currency"
+    ],
+    "format": "Comparison",
+    "category": "Invoice Settlement",
+    "unsplashQuery": "finance team comparing documents office",
+    "status": "pending",
+    "priority": "high",
+    "searchVolDe": 1400,
+    "kd": 22,
+    "searchVolEn": 1400,
+    "targetLength": 1500,
+    "taSegments": [
+      "finance",
+      "partners"
+    ],
+    "plannedDate": "2026-09-10",
+    "language": "EN"
+  },
+  {
+    "id": 4,
+    "cluster": "Corporate Treasury",
+    "slug": "when-businesses-use-otc-crypto-desks",
+    "titleDe": "When businesses use OTC crypto desks instead of public exchanges",
+    "titleEn": "When businesses use OTC crypto desks instead of public exchanges",
+    "keywordDe": "OTC crypto for business",
+    "keywordEn": "OTC crypto for business",
+    "lsiKeywords": [
+      "OTC desk",
+      "block trade",
+      "corporate liquidity"
+    ],
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "trading desk monitors professional",
+    "status": "pending",
+    "priority": "high",
+    "searchVolDe": 900,
+    "kd": 20,
+    "searchVolEn": 900,
+    "targetLength": 1500,
+    "taSegments": [
+      "finance",
+      "founders"
+    ],
+    "plannedDate": "2026-09-14",
+    "language": "EN"
+  },
+  {
+    "id": 6,
+    "cluster": "Cross-border Payments",
+    "slug": "multi-currency-invoice-settlement-with-crypto",
+    "titleDe": "Multi-currency invoice settlement with crypto: a corridor checklist",
+    "titleEn": "Multi-currency invoice settlement with crypto: a corridor checklist",
+    "keywordDe": "multi-currency crypto invoices",
+    "keywordEn": "multi-currency crypto invoices",
+    "lsiKeywords": [
+      "invoice corridor",
+      "FX vs stablecoin",
+      "supplier currency"
+    ],
+    "format": "Checklist",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "world map business meeting",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 800,
+    "kd": 18,
+    "searchVolEn": 800,
+    "targetLength": 1500,
+    "taSegments": [
+      "ops",
+      "partners"
+    ],
+    "plannedDate": "2026-09-18",
+    "language": "EN"
+  },
+  {
+    "id": 8,
+    "cluster": "Compliance",
+    "slug": "aml-controls-for-crypto-invoice-payments",
+    "titleDe": "AML controls for crypto invoice payments: a practical control map",
+    "titleEn": "AML controls for crypto invoice payments: a practical control map",
+    "keywordDe": "AML crypto invoice payments",
+    "keywordEn": "AML crypto invoice payments",
+    "lsiKeywords": [
+      "transaction monitoring",
+      "sanctions screening",
+      "payment policy"
+    ],
+    "format": "Explainer",
+    "category": "Compliance",
+    "unsplashQuery": "security compliance audit meeting",
+    "status": "pending",
+    "priority": "high",
+    "searchVolDe": 1000,
+    "kd": 23,
+    "searchVolEn": 1000,
+    "targetLength": 1600,
+    "taSegments": [
+      "compliance",
+      "finance"
+    ],
+    "plannedDate": "2026-09-22",
+    "language": "EN"
+  },
+  {
+    "id": 10,
+    "cluster": "Ops Playbooks",
+    "slug": "roles-and-approvals-for-business-crypto-payments",
+    "titleDe": "Roles and approvals for business crypto payments: maker-checker design",
+    "titleEn": "Roles and approvals for business crypto payments: maker-checker design",
+    "keywordDe": "crypto payment approval workflow",
+    "keywordEn": "crypto payment approval workflow",
+    "lsiKeywords": [
+      "maker checker",
+      "payment roles",
+      "ops controls"
+    ],
+    "format": "Howto",
+    "category": "Ops Playbooks",
+    "unsplashQuery": "team collaboration whiteboard office",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 650,
+    "kd": 16,
+    "searchVolEn": 650,
+    "targetLength": 1500,
+    "taSegments": [
+      "ops",
+      "compliance"
+    ],
+    "plannedDate": "2026-09-26",
+    "language": "EN"
+  },
+  {
+    "id": 11,
+    "cluster": "Invoice Settlement",
+    "slug": "invoice-reference-fields-for-crypto-payments",
+    "titleDe": "Invoice reference fields for crypto payments: what to put on the bill",
+    "titleEn": "Invoice reference fields for crypto payments: what to put on the bill",
+    "keywordDe": "crypto payment invoice fields",
+    "keywordEn": "crypto payment invoice fields",
+    "lsiKeywords": [
+      "payment memo",
+      "invoice number crypto",
+      "settlement reference"
+    ],
+    "format": "Howto",
+    "category": "Invoice Settlement",
+    "unsplashQuery": "printed invoice pen desk",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 500,
+    "kd": 14,
+    "searchVolEn": 500,
+    "targetLength": 1400,
+    "taSegments": [
+      "ops",
+      "accountants"
+    ],
+    "plannedDate": "2026-09-28",
+    "language": "EN"
+  },
+  {
+    "id": 12,
+    "cluster": "Corporate Treasury",
+    "slug": "converting-fiat-to-crypto-for-supplier-payouts",
+    "titleDe": "Converting fiat to crypto for supplier payouts: timing and quotes",
+    "titleEn": "Converting fiat to crypto for supplier payouts: timing and quotes",
+    "keywordDe": "fiat to crypto supplier payout",
+    "keywordEn": "fiat to crypto supplier payout",
+    "lsiKeywords": [
+      "buy crypto for business",
+      "indicative quote",
+      "payout window"
+    ],
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "currency exchange finance workspace",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 850,
+    "kd": 19,
+    "searchVolEn": 850,
+    "targetLength": 1500,
+    "taSegments": [
+      "finance",
+      "ops"
+    ],
+    "plannedDate": "2026-09-30",
+    "language": "EN"
+  },
+  {
+    "id": 13,
+    "cluster": "Cross-border Payments",
+    "slug": "weekend-and-holiday-settlement-with-stablecoins",
+    "titleDe": "Weekend and holiday settlement with stablecoins: ops realities",
+    "titleEn": "Weekend and holiday settlement with stablecoins: ops realities",
+    "keywordDe": "weekend stablecoin settlement",
+    "keywordEn": "weekend stablecoin settlement",
+    "lsiKeywords": [
+      "holiday payments",
+      "24/7 settlement",
+      "bank cutoff"
+    ],
+    "format": "Explainer",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "calendar clock business planning",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 400,
+    "kd": 12,
+    "searchVolEn": 400,
+    "targetLength": 1400,
+    "taSegments": [
+      "ops",
+      "partners"
+    ],
+    "plannedDate": "2026-10-02",
+    "language": "EN"
+  },
+  {
+    "id": 14,
+    "cluster": "Compliance",
+    "slug": "restricted-corridors-and-business-crypto-payments",
+    "titleDe": "Restricted corridors and business crypto payments: how to screen early",
+    "titleEn": "Restricted corridors and business crypto payments: how to screen early",
+    "keywordDe": "restricted countries crypto payments",
+    "keywordEn": "restricted countries crypto payments",
+    "lsiKeywords": [
+      "sanctions corridor",
+      "geo restrictions",
+      "payment eligibility"
+    ],
+    "format": "Checklist",
+    "category": "Compliance",
+    "unsplashQuery": "world map pins travel compliance",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 600,
+    "kd": 18,
+    "searchVolEn": 600,
+    "targetLength": 1500,
+    "taSegments": [
+      "compliance",
+      "ops"
+    ],
+    "plannedDate": "2026-10-04",
+    "language": "EN"
+  },
+  {
+    "id": 16,
+    "cluster": "Invoice Settlement",
+    "slug": "partial-payments-and-overpayments-in-crypto-invoices",
+    "titleDe": "Partial payments and overpayments in crypto invoices: how to reconcile",
+    "titleEn": "Partial payments and overpayments in crypto invoices: how to reconcile",
+    "keywordDe": "crypto invoice overpayment",
+    "keywordEn": "crypto invoice overpayment",
+    "lsiKeywords": [
+      "partial settlement",
+      "invoice reconciliation",
+      "payment difference"
+    ],
+    "format": "Howto",
+    "category": "Invoice Settlement",
+    "unsplashQuery": "reconciliation spreadsheet calculator",
+    "status": "pending",
+    "priority": "low",
+    "searchVolDe": 350,
+    "kd": 11,
+    "searchVolEn": 350,
+    "targetLength": 1400,
+    "taSegments": [
+      "accountants",
+      "ops"
+    ],
+    "plannedDate": "2026-10-08",
+    "language": "EN"
+  },
+  {
+    "id": 17,
+    "cluster": "Corporate Treasury",
+    "slug": "liquidity-buffers-for-crypto-payable-runs",
+    "titleDe": "Liquidity buffers for crypto payable runs: sizing without guesswork",
+    "titleEn": "Liquidity buffers for crypto payable runs: sizing without guesswork",
+    "keywordDe": "crypto payable liquidity buffer",
+    "keywordEn": "crypto payable liquidity buffer",
+    "lsiKeywords": [
+      "payable run",
+      "treasury buffer",
+      "settlement reserve"
+    ],
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "cash flow planning notebook",
+    "status": "pending",
+    "priority": "low",
+    "searchVolDe": 300,
+    "kd": 10,
+    "searchVolEn": 300,
+    "targetLength": 1400,
+    "taSegments": [
+      "finance"
+    ],
+    "plannedDate": "2026-10-10",
+    "language": "EN"
+  },
+  {
+    "id": 18,
+    "cluster": "Cross-border Payments",
+    "slug": "supplier-onboarding-for-crypto-settlement",
+    "titleDe": "Supplier onboarding for crypto settlement: questions to ask first",
+    "titleEn": "Supplier onboarding for crypto settlement: questions to ask first",
+    "keywordDe": "supplier crypto settlement onboarding",
+    "keywordEn": "supplier crypto settlement onboarding",
+    "lsiKeywords": [
+      "vendor crypto payment",
+      "wallet details",
+      "supplier KYC"
+    ],
+    "format": "Checklist",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "handshake business meeting suppliers",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 550,
+    "kd": 15,
+    "searchVolEn": 550,
+    "targetLength": 1500,
+    "taSegments": [
+      "partners",
+      "ops"
+    ],
+    "plannedDate": "2026-10-12",
+    "language": "EN"
+  },
+  {
+    "id": 19,
+    "cluster": "Compliance",
+    "slug": "travel-rule-basics-for-business-crypto-transfers",
+    "titleDe": "Travel Rule basics for business crypto transfers: what ops should know",
+    "titleEn": "Travel Rule basics for business crypto transfers: what ops should know",
+    "keywordDe": "Travel Rule business crypto",
+    "keywordEn": "Travel Rule business crypto",
+    "lsiKeywords": [
+      "VASPs",
+      "originator information",
+      "transfer compliance"
+    ],
+    "format": "Explainer",
+    "category": "Compliance",
+    "unsplashQuery": "passport documents compliance desk",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 750,
+    "kd": 22,
+    "searchVolEn": 750,
+    "targetLength": 1500,
+    "taSegments": [
+      "compliance"
+    ],
+    "plannedDate": "2026-10-14",
+    "language": "EN"
+  },
+  {
+    "id": 20,
+    "cluster": "Ops Playbooks",
+    "slug": "incident-playbook-wrong-wallet-or-wrong-asset",
+    "titleDe": "Incident playbook: wrong wallet or wrong asset on a business payment",
+    "titleEn": "Incident playbook: wrong wallet or wrong asset on a business payment",
+    "keywordDe": "wrong wallet crypto payment",
+    "keywordEn": "wrong wallet crypto payment",
+    "lsiKeywords": [
+      "payment incident",
+      "wrong network",
+      "ops escalation"
+    ],
+    "format": "Howto",
+    "category": "Ops Playbooks",
+    "unsplashQuery": "incident response team laptop night",
+    "status": "pending",
+    "priority": "medium",
+    "searchVolDe": 480,
+    "kd": 13,
+    "searchVolEn": 480,
+    "targetLength": 1500,
+    "taSegments": [
+      "ops",
+      "finance"
+    ],
+    "plannedDate": "2026-10-16",
+    "language": "EN"
+  }
+]

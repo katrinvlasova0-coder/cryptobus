@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "cluster": "Invoice Settlement",
+    "slug": "how-to-pay-business-invoices-with-usdt",
+    "titleDe": "How to pay business invoices with USDT: a practical settlement checklist",
+    "titleEn": "How to pay business invoices with USDT: a practical settlement checklist",
+    "keywordDe": "pay invoices with USDT",
+    "keywordEn": "pay invoices with USDT",
+    "lsiKeywords": [
+      "stablecoin invoice",
+      "USDT settlement",
+      "B2B crypto payment"
+    ],
+    "format": "Howto",
+    "category": "Invoice Settlement",
+    "unsplashQuery": "business invoice payment desk laptop",
+    "status": "published",
+    "priority": "high",
+    "searchVolDe": 1900,
+    "kd": 24,
+    "searchVolEn": 1900,
+    "targetLength": 1600,
+    "taSegments": [
+      "finance",
+      "ops"
+    ],
+    "plannedDate": "2026-09-08",
+    "language": "EN"
+  },
+  {
+    "id": 3,
+    "cluster": "Corporate Treasury",
+    "slug": "corporate-crypto-treasury-basics",
+    "titleDe": "Corporate crypto treasury basics: wallets, conversion, and controls",
+    "titleEn": "Corporate crypto treasury basics: wallets, conversion, and controls",
+    "keywordDe": "corporate crypto treasury",
+    "keywordEn": "corporate crypto treasury",
+    "lsiKeywords": [
+      "business wallet policy",
+      "treasury conversion",
+      "crypto controls"
+    ],
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "corporate treasury office screens",
+    "status": "published",
+    "priority": "high",
+    "searchVolDe": 1200,
+    "kd": 26,
+    "searchVolEn": 1200,
+    "targetLength": 1600,
+    "taSegments": [
+      "finance",
+      "compliance"
+    ],
+    "plannedDate": "2026-09-12",
+    "language": "EN"
+  },
+  {
+    "id": 5,
+    "cluster": "Cross-border Payments",
+    "slug": "cross-border-crypto-settlement-vs-bank-wires",
+    "titleDe": "Cross-border crypto settlement vs bank wires: cost, speed, and ops",
+    "titleEn": "Cross-border crypto settlement vs bank wires: cost, speed, and ops",
+    "keywordDe": "cross-border crypto settlement",
+    "keywordEn": "cross-border crypto settlement",
+    "lsiKeywords": [
+      "international payment crypto",
+      "wire alternative",
+      "settlement speed"
+    ],
+    "format": "Comparison",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "global shipping containers logistics",
+    "status": "published",
+    "priority": "high",
+    "searchVolDe": 2100,
+    "kd": 28,
+    "searchVolEn": 2100,
+    "targetLength": 1700,
+    "taSegments": [
+      "ops",
+      "finance"
+    ],
+    "plannedDate": "2026-09-16",
+    "language": "EN"
+  },
+  {
+    "id": 7,
+    "cluster": "Compliance",
+    "slug": "kyb-for-business-crypto-accounts",
+    "titleDe": "KYB for business crypto accounts: documents, timelines, and owners",
+    "titleEn": "KYB for business crypto accounts: documents, timelines, and owners",
+    "keywordDe": "KYB crypto business account",
+    "keywordEn": "KYB crypto business account",
+    "lsiKeywords": [
+      "business verification",
+      "beneficial owners",
+      "CASP onboarding"
+    ],
+    "format": "Howto",
+    "category": "Compliance",
+    "unsplashQuery": "compliance checklist office documents",
+    "status": "published",
+    "priority": "high",
+    "searchVolDe": 1100,
+    "kd": 21,
+    "searchVolEn": 1100,
+    "targetLength": 1600,
+    "taSegments": [
+      "compliance",
+      "founders"
+    ],
+    "plannedDate": "2026-09-20",
+    "language": "EN"
+  },
+  {
+    "id": 9,
+    "cluster": "Ops Playbooks",
+    "slug": "accounting-handoff-for-crypto-settlements",
+    "titleDe": "Accounting handoff for crypto settlements: evidence finance needs",
+    "titleEn": "Accounting handoff for crypto settlements: evidence finance needs",
+    "keywordDe": "accounting crypto settlements",
+    "keywordEn": "accounting crypto settlements",
+    "lsiKeywords": [
+      "crypto bookkeeping",
+      "settlement evidence",
+      "controller checklist"
+    ],
+    "format": "Checklist",
+    "category": "Ops Playbooks",
+    "unsplashQuery": "accountant laptop spreadsheet office",
+    "status": "published",
+    "priority": "medium",
+    "searchVolDe": 700,
+    "kd": 17,
+    "searchVolEn": 700,
+    "targetLength": 1500,
+    "taSegments": [
+      "accountants",
+      "finance"
+    ],
+    "plannedDate": "2026-09-24",
+    "language": "EN"
+  },
+  {
+    "id": 15,
+    "cluster": "Ops Playbooks",
+    "slug": "pilot-checklist-accepting-crypto-for-b2b-invoices",
+    "titleDe": "Pilot checklist: accepting crypto for B2B invoices in 30 days",
+    "titleEn": "Pilot checklist: accepting crypto for B2B invoices in 30 days",
+    "keywordDe": "accept crypto B2B invoices",
+    "keywordEn": "accept crypto B2B invoices",
+    "lsiKeywords": [
+      "crypto pilot",
+      "B2B payments rollout",
+      "ops readiness"
+    ],
+    "format": "Checklist",
+    "category": "Ops Playbooks",
+    "unsplashQuery": "project checklist sticky notes",
+    "status": "published",
+    "priority": "high",
+    "searchVolDe": 950,
+    "kd": 20,
+    "searchVolEn": 950,
+    "targetLength": 1600,
+    "taSegments": [
+      "founders",
+      "ops"
+    ],
+    "plannedDate": "2026-10-06",
+    "language": "EN"
+  }
+]

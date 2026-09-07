@@ -1,0 +1,239 @@
+name: Content Factory — Scheduled Generation
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of articles to generate'
+        default: '1'
+      mock:
+        description: 'Use mock generator (pipeline test only — not for production)'
+        type: boolean
+        default: false
+      publish_mock:
+        description: 'Commit mock articles to main (requires mock=true; no Claude API needed)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: content-factory-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Decide generation mode
+        id: gen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          HAS_ANTHROPIC="false"
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            HAS_ANTHROPIC="true"
+          fi
+
+          INPUT_MOCK="${{ github.event.inputs.mock }}"
+          PUBLISH_MOCK="${{ github.event.inputs.publish_mock }}"
+          IS_SCHEDULE="${{ github.event_name == 'schedule' }}"
+
+          # Every other day on schedule (anchor: 2026-09-08 = first publish day).
+          if [ "$IS_SCHEDULE" = "true" ]; then
+            ANCHOR_DAY=$(( $(date -u -d "2026-09-08" +%s) / 86400 ))
+            TODAY_DAY=$(( $(date -u +%s) / 86400 ))
+            if [ $(( (TODAY_DAY - ANCHOR_DAY) % 2 )) -ne 0 ]; then
+              echo "mode=skip-eod" >> "$GITHUB_OUTPUT"
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "⏭️ Every-other-day schedule: no article today (next run tomorrow 08:00 UTC)"
+              exit 0
+            fi
+            echo "📅 Every-other-day schedule: publish day"
+          fi
+
+          if [ "$HAS_ANTHROPIC" = "true" ]; then
+            echo "mode=claude" >> "$GITHUB_OUTPUT"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Claude API available — real article generation"
+          elif [ "$IS_SCHEDULE" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Schedule and manual re-runs still ship a safe fallback when Claude is unavailable.
+            if [ "$INPUT_MOCK" = "true" ] && [ "$PUBLISH_MOCK" = "true" ]; then
+              echo "mode=mock" >> "$GITHUB_OUTPUT"
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "🧪 Manual mock publish enabled (test content only)"
+            elif [ "$INPUT_MOCK" = "true" ]; then
+              echo "mode=test-only" >> "$GITHUB_OUTPUT"
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "🧪 Mock selected but publish_mock=false — only integration test will run"
+            else
+              echo "mode=fallback-only" >> "$GITHUB_OUTPUT"
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "⚠️ ANTHROPIC_API_KEY missing — will publish a safe fallback article"
+            fi
+          elif [ "$INPUT_MOCK" = "true" ] && [ "$PUBLISH_MOCK" = "true" ]; then
+            echo "mode=mock" >> "$GITHUB_OUTPUT"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "🧪 Manual mock publish enabled (test content only)"
+          elif [ "$INPUT_MOCK" = "true" ]; then
+            echo "mode=test-only" >> "$GITHUB_OUTPUT"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "🧪 Mock selected but publish_mock=false — only integration test will run"
+          else
+            echo "mode=skip" >> "$GITHUB_OUTPUT"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "⏭️ No ANTHROPIC_API_KEY and mock not enabled — generation skipped"
+          fi
+
+      - uses: actions/setup-node@v6
+        if: steps.gen.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        if: steps.gen.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        run: cd content-factory && npm install
+
+      - name: Initialize content factory
+        if: steps.gen.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        run: cd content-factory && npm run init
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          SITE_BASE_URL: https://cryp2bus.com
+          CONTENT_DIR: ../content/blog
+          SITE_PUBLIC_DIR: ../public
+
+      - name: Show queue before generation
+        if: steps.gen.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: |
+          cd content-factory
+          npm run queue:list
+          npx tsx src/index.ts queue stats
+
+      - name: Validate safe-fallback templates
+        if: steps.gen.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        run: cd content-factory && npm run test:fallback
+
+      - name: Run integration test
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: cd content-factory && npm run test
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+          FROM_EMAIL: onboarding@resend.dev
+          SITE_BASE_URL: https://cryp2bus.com
+          CONTENT_DIR: ../content/blog
+          SITE_PUBLIC_DIR: ../public
+
+      - name: Generate articles batch
+        id: batch
+        if: steps.gen.outputs.run == 'true' && steps.gen.outputs.mode != 'fallback-only'
+        continue-on-error: true
+        run: |
+          cd content-factory
+          MOCK_FLAG=""
+          if [ "${{ steps.gen.outputs.mode }}" = "mock" ]; then
+            MOCK_FLAG="--mock"
+            echo "Using mock generator (explicit publish_mock)"
+          else
+            echo "Using Claude API"
+          fi
+          npm run batch -- -n ${{ github.event.inputs.count || '1' }} $MOCK_FLAG
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+          FROM_EMAIL: onboarding@resend.dev
+          SITE_BASE_URL: https://cryp2bus.com
+          CONTENT_DIR: ../content/blog
+          SITE_PUBLIC_DIR: ../public
+
+      - name: Publish safe fallback if no new article
+        id: fallback
+        if: steps.gen.outputs.run == 'true'
+        run: |
+          cd content-factory
+          set +e
+          OUTPUT=$(npx tsx src/index.ts fallback --only-if-missing --reason "ci-safety-net (mode=${{ steps.gen.outputs.mode }}, batch=${{ steps.batch.outcome }})" 2>&1)
+          STATUS=$?
+          set -e
+          echo "$OUTPUT"
+          if echo "$OUTPUT" | grep -q "Safe fallback published:"; then
+            echo "status=published" >> "$GITHUB_OUTPUT"
+          elif echo "$OUTPUT" | grep -q "Fallback skipped:"; then
+            echo "status=skipped" >> "$GITHUB_OUTPUT"
+          elif [ $STATUS -eq 0 ]; then
+            echo "status=ok" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=failed" >> "$GITHUB_OUTPUT"
+            exit $STATUS
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+          FROM_EMAIL: onboarding@resend.dev
+          SITE_BASE_URL: https://cryp2bus.com
+          CONTENT_DIR: ../content/blog
+          SITE_PUBLIC_DIR: ../public
+
+      - name: Show generated files
+        if: steps.gen.outputs.run == 'true'
+        run: |
+          echo "=== New/updated blog files ==="
+          git status --short content/blog/ public/sitemap.xml public/robots.txt public/llms.txt content-factory/queue/ || true
+          ls -la content/blog/*.mdx | tail -5 || true
+
+      - name: Commit and push generated articles
+        if: steps.gen.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/blog/ public/sitemap.xml public/robots.txt public/llms.txt content-factory/queue/
+          if git diff --staged --quiet; then
+            if [ "${{ steps.fallback.outputs.status }}" = "skipped" ]; then
+              echo "No new files to commit — fallback skipped (exact slug already present)."
+              exit 0
+            fi
+            echo "::error::No article files to commit — generation and fallback both produced nothing. Check logs above."
+            exit 1
+          fi
+          git commit -m "feat(blog): content factory generated articles"
+          git fetch origin ${{ github.ref_name }}
+          if ! git pull --rebase origin ${{ github.ref_name }}; then
+            echo "::error::Rebase failed — main changed during generation. Aborting."
+            git rebase --abort || true
+            exit 1
+          fi
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Trigger GitHub Pages deploy
+        if: steps.gen.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Triggering deploy workflow (GITHUB_TOKEN pushes do not auto-trigger deploy.yml)..."
+          gh workflow run deploy.yml --ref "${{ github.ref_name }}"
+
+      - name: Skip summary
+        if: steps.gen.outputs.run != 'true'
+        run: |
+          echo "Generation skipped (${{ steps.gen.outputs.mode }})."
+          echo "Add ANTHROPIC_API_KEY for real articles, or run manually with mock=true + publish_mock=true to test the pipeline."

@@ -19,6 +19,7 @@ const COLS = [
     title: 'Company',
     links: [
       ['About', '/about'],
+      ['Blog', '/blog'],
       ['Security', '/security'],
       ['How It Works', '/how-it-works'],
       ['FAQ', '/faq'],

@@ -1,0 +1,73 @@
+---
+title: "Accounting handoff for crypto settlements: evidence finance needs"
+titleEn: "Accounting handoff for crypto settlements: evidence finance needs"
+description: "The evidence pack controllers need for crypto settlements: hashes, invoices, approvals, FX notes, and reconciliation steps that close cleanly."
+descriptionEn: "The evidence pack controllers need for crypto settlements: hashes, invoices, approvals, FX notes, and reconciliation steps that close cleanly."
+datePublished: "2026-09-07"
+dateModified: "2026-09-07"
+author:
+  name: "Cryp2bus Editorial"
+  role: "Editorial"
+category: "Ops Playbooks"
+readTime: "8 min"
+coverImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=720&q=80&auto=format&fit=crop"
+featured: true
+tags: ["accounting crypto settlements","Ops Playbooks","business crypto","2026"]
+tagsEn: ["accounting crypto settlements","Ops Playbooks","business crypto","2026"]
+faq:
+  - question: "What evidence does accounting need for crypto settlements?"
+    answer: "At minimum: invoice, approvals, address attestation, asset/network/amount, transaction hash, and posting references — plus conversion notes when fiat was converted."
+  - question: "Is a blockchain explorer link enough?"
+    answer: "No. Explorers show a transfer; they do not prove internal approval or invoice matching."
+  - question: "How should partial crypto payments be handled?"
+    answer: "Define tolerance and remainder rules in AP policy before the first partial occurs."
+  - question: "Where should the tx hash be stored?"
+    answer: "In the AP/ERP memo fields and in the payable packet archive."
+  - question: "Who owns incomplete packets?"
+    answer: "Payments ops owns completion; accounting owns acceptance standards."
+---
+
+## Accounting needs a packet, not a screenshot
+
+If payments ops sends only a transaction hash, controllers cannot close. Design the handoff as a packet that mirrors wire evidence: who approved, what invoice, which asset/network, what amount, when it confirmed, and how it posted.
+
+## Minimum evidence checklist
+
+1. Invoice PDF and payable ID.
+2. Approval trail (maker-checker).
+3. Destination address attestation.
+4. Asset, network, and amount.
+5. Transaction hash + explorer URL.
+6. Timestamp of send and confirmation depth policy.
+7. Supplier acknowledgment when available.
+8. FX / conversion note if fiat was converted first.
+9. GL account mapping.
+
+| Evidence | System of record | Failure if missing |
+| --- | --- | --- |
+| Invoice | AP | Cannot match payable |
+| Hash | Payments ops | Cannot prove settlement |
+| Approval | Workflow tool | Control gap |
+| Conversion note | Treasury | P&L unexplained |
+
+![Accountant reviewing digital payment evidence](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=720&q=80&auto=format&fit=crop)
+
+## Reconciliation rhythm
+
+Reconcile daily during pilots, then settle into a cadence that matches payable volume. Partial payments and overpayments need explicit rules — see [invoice field standards](/blog/invoice-reference-fields-for-crypto-payments/) once that guide is live, and keep memos consistent.
+
+## Risks and limits
+
+Chain explorers are not a substitute for internal approvals. Price moves between conversion and payment can create P&L noise if undocumented. Wrong-asset sends create hard-to-reverse incidents.
+
+## Handoff SOP (numbered)
+
+1. Ops closes the payable ticket.
+2. Packet auto-assembles or is attached manually.
+3. Accounting validates completeness.
+4. Posting occurs with hash in the memo field.
+5. Exceptions go to a named queue within SLA.
+
+Open a Cryptobus business account to buy crypto, pay invoices, and settle cross-border.
+
+*This material is for informational and educational purposes only. It is not legal, tax, investment, or financial advice. Cryptocurrency transactions involve operational, market, and compliance risk. Outcomes depend on your policies, counterparties, corridors, and applicable law. Readers should verify primary sources and internal controls as of the action date.*

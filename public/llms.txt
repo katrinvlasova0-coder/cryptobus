@@ -1,0 +1,19 @@
+# Cryp2bus (Cryptobus)
+
+> Educational explainers on business crypto settlements, invoice payments, treasury, and compliance. Cryptobus provides crypto transaction infrastructure for businesses — not investment advice.
+
+Site: https://cryp2bus.com/
+Blog: https://cryp2bus.com/blog/
+
+## Articles
+
+- [Accounting handoff for crypto settlements: evidence finance needs](https://cryp2bus.com/blog/accounting-handoff-for-crypto-settlements/)
+- [Corporate crypto treasury basics: wallets, conversion, and controls](https://cryp2bus.com/blog/corporate-crypto-treasury-basics/)
+- [Cross-border crypto settlement vs bank wires: cost, speed, and ops](https://cryp2bus.com/blog/cross-border-crypto-settlement-vs-bank-wires/)
+- [How to pay business invoices with USDT: a practical settlement checklist](https://cryp2bus.com/blog/how-to-pay-business-invoices-with-usdt/)
+- [KYB for business crypto accounts: documents, timelines, and owners](https://cryp2bus.com/blog/kyb-for-business-crypto-accounts/)
+- [Pilot checklist: accepting crypto for B2B invoices in 30 days](https://cryp2bus.com/blog/pilot-checklist-accepting-crypto-for-b2b-invoices/)
+
+## Contact
+
+Open a Cryptobus business account to buy crypto, pay invoices, and settle cross-border: https://cryp2bus.com/

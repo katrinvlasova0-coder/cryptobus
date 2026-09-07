@@ -21,6 +21,8 @@ import Security from '@/pages/Security';
 import About from '@/pages/About';
 import Faq from '@/pages/Faq';
 import LegalPage from '@/pages/LegalPage';
+import Blog from '@/pages/Blog';
+import BlogPost from '@/pages/BlogPost';
 
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined;
 
@@ -45,6 +47,8 @@ function App() {
                 <Route path="/security" element={<Security />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<Faq />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/legal/:slug" element={<LegalPage />} />
               </Route>
               <Route path="*" element={<PageNotFound />} />
