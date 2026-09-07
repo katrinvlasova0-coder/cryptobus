@@ -179,6 +179,65 @@ export function selectTemplate(date: string): SafeTemplate {
   return SAFE_TEMPLATES[index];
 }
 
+function normalizeTopic(value: string): string {
+  return String(value ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/** True when an existing article already covers this fallback keyword/title. */
+export function isTopicAlreadyCovered(
+  template: SafeTemplate,
+  contentDir = getContentDir(),
+): boolean {
+  if (!fs.existsSync(contentDir)) return false;
+  const keyword = normalizeTopic(template.keywordEn);
+  const title = normalizeTopic(template.titleEn);
+  const titleCore = title
+    .replace(/\b(a|an|the|how to|basics|practical|educational|checklist|explained)\b/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  for (const file of fs.readdirSync(contentDir)) {
+    if (!file.endsWith('.mdx')) continue;
+    // Ignore other dated fallbacks of the same template id — handled elsewhere.
+    if (file.startsWith(`fallback-${template.id}-`)) continue;
+    const raw = fs.readFileSync(path.join(contentDir, file), 'utf8');
+    const existingTitle = normalizeTopic(raw.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? '');
+    const tagsLine = raw.match(/^tags:\s*(\[[^\]]*\])/m)?.[1] ?? '';
+    const existingKeyword = normalizeTopic(
+      raw.match(/^keywordEn:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? '',
+    );
+    const haystack = `${existingTitle} ${existingKeyword} ${normalizeTopic(tagsLine)}`;
+    if (keyword && haystack.includes(keyword)) return true;
+    if (titleCore && existingTitle.includes(titleCore)) return true;
+    // Near-duplicate titles (seed vs shortened fallback).
+    if (
+      existingTitle &&
+      title &&
+      (existingTitle.includes(title.slice(0, 48)) || title.includes(existingTitle.slice(0, 48)))
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/** Pick today's rotation template, or the next uncovered one. */
+export function selectUncoveredTemplate(
+  date: string,
+  contentDir = getContentDir(),
+): SafeTemplate | null {
+  const start = selectTemplate(date);
+  const startIndex = SAFE_TEMPLATES.findIndex((t) => t.id === start.id);
+  for (let offset = 0; offset < SAFE_TEMPLATES.length; offset++) {
+    const template = SAFE_TEMPLATES[(startIndex + offset) % SAFE_TEMPLATES.length];
+    if (!isTopicAlreadyCovered(template, contentDir)) return template;
+  }
+  return null;
+}
+
 function paragraph(frame: string, fact: string, tail: string, vars: Record<string, string>): string {
   return `${fill(frame, vars)} ${fact} ${fill(tail, vars)}`;
 }
@@ -402,7 +461,11 @@ export async function publishSafeFallback(options: {
     }
   }
 
-  const template = selectTemplate(date);
+  const template = selectUncoveredTemplate(date, contentDir);
+  if (!template) {
+    console.log('ℹ️ Fallback skipped: every safe template topic is already covered on the blog');
+    return { published: false, skipped: true, reason: 'all-topics-covered' };
+  }
   const slug = `fallback-${template.id}-${date}`;
 
   // Only skip when THIS rotation's slug already exists. Pre-seeded articles for the

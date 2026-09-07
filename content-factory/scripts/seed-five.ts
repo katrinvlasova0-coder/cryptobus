@@ -31,25 +31,25 @@ const DEPTH = [
 
 const BATCH = [
   {
-    id: 'usdt-invoice-checklist',
+    id: 'usdc-vs-usdt-supplier',
     date: '2026-09-09',
     cover: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80&auto=format&fit=crop',
     mid: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&auto=format&fit=crop',
   },
   {
-    id: 'corporate-treasury-controls',
+    id: 'otc-desk-business',
     date: '2026-09-10',
     cover: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80&auto=format&fit=crop',
     mid: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop',
   },
   {
-    id: 'cross-border-vs-wires',
+    id: 'multi-currency-crypto-invoices',
     date: '2026-09-11',
     cover: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&q=80&auto=format&fit=crop',
     mid: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',
   },
   {
-    id: 'kyb-business-account',
+    id: 'aml-invoice-controls',
     date: '2026-09-12',
     cover: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80&auto=format&fit=crop',
     mid: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b35d16?w=800&q=80&auto=format&fit=crop',
