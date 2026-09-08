@@ -1,34 +1,5 @@
 [
   {
-    "id": 2,
-    "cluster": "Invoice Settlement",
-    "slug": "usdc-vs-usdt-for-supplier-payments",
-    "titleDe": "USDC vs USDT for supplier payments: what finance teams compare",
-    "titleEn": "USDC vs USDT for supplier payments: what finance teams compare",
-    "keywordDe": "USDC vs USDT business payments",
-    "keywordEn": "USDC vs USDT business payments",
-    "lsiKeywords": [
-      "stablecoin choice",
-      "supplier crypto payment",
-      "invoice currency"
-    ],
-    "format": "Comparison",
-    "category": "Invoice Settlement",
-    "unsplashQuery": "finance team comparing documents office",
-    "status": "pending",
-    "priority": "high",
-    "searchVolDe": 1400,
-    "kd": 22,
-    "searchVolEn": 1400,
-    "targetLength": 1500,
-    "taSegments": [
-      "finance",
-      "partners"
-    ],
-    "plannedDate": "2026-09-10",
-    "language": "EN"
-  },
-  {
     "id": 4,
     "cluster": "Corporate Treasury",
     "slug": "when-businesses-use-otc-crypto-desks",
