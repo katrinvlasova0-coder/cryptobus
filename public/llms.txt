@@ -14,6 +14,7 @@ Blog: https://cryp2bus.com/blog/
 - [KYB for business crypto accounts: documents, timelines, and owners](https://cryp2bus.com/blog/kyb-for-business-crypto-accounts/)
 - [Pilot checklist: accepting crypto for B2B invoices in 30 days](https://cryp2bus.com/blog/pilot-checklist-accepting-crypto-for-b2b-invoices/)
 - [USDC vs USDT for supplier payments: what finance teams compare](https://cryp2bus.com/blog/usdc-vs-usdt-for-supplier-payments/)
+- [When businesses use OTC crypto desks instead of public exchanges](https://cryp2bus.com/blog/when-businesses-use-otc-crypto-desks/)
 
 ## Contact
 

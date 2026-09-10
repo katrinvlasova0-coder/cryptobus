@@ -1,0 +1,133 @@
+---
+title: "When businesses use OTC crypto desks instead of public exchanges"
+titleEn: "When businesses use OTC crypto desks instead of public exchanges"
+description: "Learn when OTC crypto for business makes sense over public exchanges, how block trades work, and what treasury teams should check before executing."
+descriptionEn: "Learn when OTC crypto for business makes sense over public exchanges, how block trades work, and what treasury teams should check before executing."
+datePublished: "2026-09-14"
+dateModified: "2026-09-14"
+author:
+  name: "Cryp2bus Editorial"
+  role: "Editorial"
+category: "Corporate Treasury"
+readTime: "8 min"
+coverImage: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&q=80&auto=format&fit=crop"
+featured: false
+tags: ["OTC crypto for business", "Corporate Treasury", "business crypto", "2026"]
+tagsEn: ["OTC crypto for business", "Corporate Treasury", "business crypto", "2026"]
+faq:
+  - question: "What is OTC crypto for business and when should a company use it?"
+    answer: "OTC crypto for business refers to negotiated, off-exchange trades between a company and a liquidity provider, typically used for large or recurring transactions where public order books would cause price slippage. Companies use it when trade size, timing, or settlement requirements make a public exchange order impractical."
+  - question: "How is an OTC desk different from a public exchange?"
+    answer: "A public exchange matches orders from many anonymous participants through an order book, so large orders can move the price. An OTC desk negotiates a single price directly with a counterparty for a block trade, settling outside the public order book, which can reduce market impact for large transactions."
+  - question: "What size trade typically justifies using an OTC desk instead of an exchange?"
+    answer: "There is no universal threshold; it depends on the asset's exchange liquidity at the time of the trade. Treasury teams generally compare the expected slippage cost of an exchange order against the OTC quote spread before deciding, rather than relying on a fixed dollar figure."
+  - question: "What compliance checks apply to OTC crypto trades for businesses?"
+    answer: "OTC counterparties typically require Know Your Business (KYB) verification, source-of-funds documentation, and screening consistent with FATF-aligned anti-money-laundering standards. Businesses should confirm a desk's licensing status and compliance process before onboarding."
+  - question: "Can OTC desks help with cross-border invoice settlement?"
+    answer: "OTC desks can convert or source crypto assets for a specific settlement need, including cross-border payments, but they do not replace invoice payment infrastructure. Businesses generally still need a compliant payment workflow to route funds to a supplier or counterparty."
+  - question: "What risks should a business consider before using an OTC crypto desk?"
+    answer: "Key risks include counterparty credit risk, settlement timing mismatches, price movement between quote and settlement, and regulatory status of the desk. These are operational and market risks, not guarantees of outcome, and should be assessed against internal treasury policy."
+---
+
+When a company needs to buy or sell a large amount of crypto — for treasury conversion, supplier settlement, or balance sheet management — a public exchange order book is not always the right tool. This is where OTC crypto for business comes in: a negotiated block trade with a liquidity desk, executed off the public order book, at a price agreed before settlement. Businesses turn to OTC desks primarily to avoid slippage on size, to get predictable settlement timing, and to access relationship-based liquidity that a retail-facing exchange interface does not offer.
+
+This explainer walks through what an OTC desk actually does, when it makes operational sense for a business, how block trades are priced and settled, and what compliance and risk factors a treasury or finance lead should check before using one.
+
+## What is an OTC crypto desk, exactly
+
+An over-the-counter (OTC) crypto desk is a counterparty — often a specialized trading firm, a bank-adjacent liquidity provider, or a division of a licensed exchange — that trades directly with a client rather than matching orders on a public book. Instead of placing a market order that other traders can see and react to, a business requests a quote for a specific size and asset pair, and the desk returns a firm or indicative price.
+
+The core mechanics differ from a retail exchange in three ways:
+
+1. **Price discovery is private.** The quote is negotiated bilaterally, not visible to the broader market.
+2. **Settlement is scheduled, not instant-by-default.** Many block trades settle within an agreed window rather than at the moment of execution.
+3. **Relationship and credit terms matter.** Repeat clients may get access to larger size, tighter spreads, or extended settlement terms based on trading history.
+
+For businesses already reading about [corporate crypto treasury basics](/blog/corporate-crypto-treasury-basics/), OTC execution is typically one tool among several — used alongside standard exchange accounts, not as a full replacement.
+
+## Why public exchange order books can be the wrong tool for size
+
+Public order books work well for small, frequent trades because liquidity at each price level is usually sufficient to absorb the order without moving the price much. Large orders behave differently. If a business needs to convert a seven-figure treasury position, sending that as a single market order can walk through multiple price levels, resulting in an average execution price meaningfully worse than the quoted mid-price. This effect is known as slippage.
+
+There are also visibility concerns. A very large resting limit order on a public book can signal intent to other market participants, who may adjust their own orders in response. An OTC negotiation avoids that signal because the trade is not shown on the book until (if ever) it is reported.
+
+Finally, timing matters for corporate finance workflows. A business paying a supplier or reconciling a treasury position at month-end often needs a known, fixed settlement time — not exposure to however long it takes an exchange order to fully fill during thin liquidity hours.
+
+## Common business scenarios for OTC execution
+
+Not every crypto-related business need justifies an OTC desk. The following scenarios are where the tool is most commonly used in practice:
+
+1. **Large treasury conversions.** Converting a significant stablecoin or crypto balance to fiat, or vice versa, without moving the market price against yourself.
+2. **Recurring supplier or partner settlement at scale.** A company that regularly needs to source or offload block-sized crypto amounts for cross-border settlement, as discussed in [cross-border crypto settlement vs bank wires](/blog/cross-border-crypto-settlement-vs-bank-wires/).
+3. **Post-acquisition or fundraising conversions.** Businesses that received a large crypto payment or raised funds in crypto and need an orderly, less disruptive conversion process.
+4. **Illiquid or lower-volume asset pairs.** Some tokens simply do not have deep exchange order books; an OTC desk may be the only realistic way to execute size without extreme price impact.
+5. **Time-sensitive settlement windows.** When a business needs execution certainty ahead of a specific accounting cutoff or contractual deadline, rather than an open-ended exchange fill.
+
+![Magnifying glass over financial papers](https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80&auto=format&fit=crop)
+
+## OTC desk vs public exchange: a side-by-side comparison
+
+| Factor | Public exchange order book | OTC desk / block trade |
+|---|---|---|
+| Price visibility | Public, real-time order book | Private, bilateral quote |
+| Best suited for | Small to mid-size, frequent trades | Large, infrequent block trades |
+| Slippage risk on size | Higher for large orders | Reduced via negotiated single price |
+| Settlement timing | Immediate upon fill | Often scheduled within an agreed window |
+| Counterparty | Anonymous market participants | Known, vetted trading counterparty |
+| Compliance onboarding | Standard KYC/KYB at account level | KYB plus often enhanced due diligence per relationship |
+| Typical use case | Routine conversions, smaller invoice payments | Treasury rebalancing, large one-off settlements |
+
+This table is illustrative of general market structure differences and does not represent terms offered by any specific provider.
+
+## How block trade pricing and settlement typically work
+
+An OTC quote usually reflects the desk's own inventory position, the size requested, current market volatility, and the desk's assessment of counterparty risk. Businesses should expect the following general sequence, though exact steps vary by provider:
+
+1. The business submits a request for quote (RFQ) specifying asset, size, and direction (buy or sell).
+2. The desk returns a quote, which may be firm for a short window (seconds to minutes) or indicative pending final confirmation.
+3. Both parties confirm trade terms, often in writing or through a trading platform log.
+4. Settlement occurs according to agreed terms — this can be simultaneous, or split between an upfront and a follow-up leg depending on the relationship and trust level.
+5. Funds and assets are reconciled against internal treasury records, ideally feeding into standard accounting entries consistent with guidance referenced in IFRS materials on digital assets (see ifrs.org for general accounting standard-setting context).
+
+Businesses that also handle recurring supplier payments may want to compare how OTC-sourced liquidity interacts with day-to-day payment flows described in [pay business invoices with USDT](/blog/how-to-pay-business-invoices-with-usdt/) and [USDC vs USDT for supplier payments](/blog/usdc-vs-usdt-for-supplier-payments/), since the asset used for OTC execution may differ from the asset used for final invoice settlement.
+
+## Compliance and counterparty diligence for OTC crypto trades
+
+OTC trading does not reduce compliance obligations — if anything, desks typically apply enhanced due diligence given trade size. Businesses should expect and prepare for:
+
+- Know Your Business (KYB) documentation, including corporate registration, beneficial ownership, and authorized signatories.
+- Source-of-funds and source-of-wealth questions for large transactions.
+- Screening against sanctions lists and anti-money-laundering standards broadly consistent with FATF recommendations (fatf-gafi.org).
+- Jurisdiction-specific licensing checks — in the EU, this increasingly means confirming a desk's status under the Markets in Crypto-Assets (MiCA) framework referenced on official EU institution pages.
+- Internal treasury policy sign-off before initiating a relationship with any new OTC counterparty.
+
+Finance teams handling multiple currencies or jurisdictions may also find it useful to review [multi-currency crypto invoice settlement](/blog/multi-currency-invoice-settlement-with-crypto/) to understand how OTC-sourced liquidity fits into a broader settlement architecture.
+
+## Risks and limits of OTC crypto for business
+
+OTC execution addresses specific problems, but it introduces its own set of risks that should be weighed against internal treasury policy:
+
+- **Counterparty risk.** Settlement is only as reliable as the desk's operational and financial soundness; unlike an exchange with a public order book, a bilateral OTC relationship depends heavily on trust and contractual terms.
+- **Price movement between quote and settlement.** If settlement is not instantaneous, market movement during the window can create a gap between the agreed price and prevailing market price.
+- **Reduced price transparency.** Because quotes are private, it can be harder to independently verify that a quote is competitive without soliciting multiple desks.
+- **Regulatory status varies by provider and jurisdiction.** Not all entities offering OTC services operate under equivalent licensing or oversight, so verifying registration and compliance status is a necessary step, not an optional one.
+- **Operational complexity.** Block trades often require more manual coordination — legal terms, settlement instructions, reconciliation — than a standard exchange trade.
+
+None of this implies a guaranteed outcome in either direction; OTC execution is a structural choice about how a trade is priced and settled, not a mechanism for securing favorable pricing or returns.
+
+## Practical checklist before using an OTC desk
+
+Before initiating an OTC relationship, treasury and finance leads should typically confirm:
+
+1. The desk's regulatory status and licensing in relevant jurisdictions.
+2. Internal KYB documentation is ready and accurate.
+3. Settlement terms (timing, custody handoff points, and confirmation process) are documented in writing.
+4. Internal treasury policy explicitly authorizes OTC execution above a defined size threshold.
+5. A process exists to compare at least two quotes for material trades where feasible.
+6. Accounting and reconciliation workflows are mapped to the specific settlement mechanics of the chosen desk.
+
+## Getting started with a business account
+
+Many of the operational questions above — KYB onboarding, settlement workflows, and treasury conversion — are easier to manage when routed through infrastructure built for corporate use rather than retail tools. Open a Cryptobus business account to buy crypto, pay invoices, and settle cross-border.
+
+*This material is for informational and educational purposes only. It is not legal, tax, investment, or financial advice. Cryptocurrency transactions involve operational, market, and compliance risk. Outcomes depend on your policies, counterparties, corridors, and applicable law. Readers should verify primary sources and internal controls as of the action date.*

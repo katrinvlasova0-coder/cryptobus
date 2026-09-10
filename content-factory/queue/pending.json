@@ -1,34 +1,5 @@
 [
   {
-    "id": 4,
-    "cluster": "Corporate Treasury",
-    "slug": "when-businesses-use-otc-crypto-desks",
-    "titleDe": "When businesses use OTC crypto desks instead of public exchanges",
-    "titleEn": "When businesses use OTC crypto desks instead of public exchanges",
-    "keywordDe": "OTC crypto for business",
-    "keywordEn": "OTC crypto for business",
-    "lsiKeywords": [
-      "OTC desk",
-      "block trade",
-      "corporate liquidity"
-    ],
-    "format": "Explainer",
-    "category": "Corporate Treasury",
-    "unsplashQuery": "trading desk monitors professional",
-    "status": "pending",
-    "priority": "high",
-    "searchVolDe": 900,
-    "kd": 20,
-    "searchVolEn": 900,
-    "targetLength": 1500,
-    "taSegments": [
-      "finance",
-      "founders"
-    ],
-    "plannedDate": "2026-09-14",
-    "language": "EN"
-  },
-  {
     "id": 6,
     "cluster": "Cross-border Payments",
     "slug": "multi-currency-invoice-settlement-with-crypto",
