@@ -90,6 +90,36 @@
     "completedAt": "2026-09-12"
   },
   {
+    "id": 4,
+    "cluster": "Corporate Treasury",
+    "slug": "when-businesses-use-otc-crypto-desks",
+    "titleDe": "When businesses use OTC crypto desks instead of public exchanges",
+    "titleEn": "When businesses use OTC crypto desks instead of public exchanges",
+    "keywordDe": "OTC crypto for business",
+    "keywordEn": "OTC crypto for business",
+    "lsiKeywords": [
+      "OTC desk",
+      "block trade",
+      "corporate liquidity"
+    ],
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "trading desk monitors professional",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 900,
+    "kd": 20,
+    "searchVolEn": 900,
+    "targetLength": 1500,
+    "taSegments": [
+      "finance",
+      "founders"
+    ],
+    "plannedDate": "2026-09-14",
+    "language": "EN",
+    "completedAt": "2026-09-14"
+  },
+  {
     "id": 5,
     "cluster": "Cross-border Payments",
     "slug": "cross-border-crypto-settlement-vs-bank-wires",
@@ -210,33 +240,33 @@
     "completedAt": "2026-10-06"
   },
   {
-    "id": 4,
-    "cluster": "Corporate Treasury",
-    "slug": "when-businesses-use-otc-crypto-desks",
-    "titleDe": "When businesses use OTC crypto desks instead of public exchanges",
-    "titleEn": "When businesses use OTC crypto desks instead of public exchanges",
-    "keywordDe": "OTC crypto for business",
-    "keywordEn": "OTC crypto for business",
+    "id": 8,
+    "cluster": "Compliance",
+    "slug": "aml-controls-for-crypto-invoice-payments",
+    "titleDe": "AML controls for crypto invoice payments: a practical control map",
+    "titleEn": "AML controls for crypto invoice payments: a practical control map",
+    "keywordDe": "AML crypto invoice payments",
+    "keywordEn": "AML crypto invoice payments",
     "lsiKeywords": [
-      "OTC desk",
-      "block trade",
-      "corporate liquidity"
+      "transaction monitoring",
+      "sanctions screening",
+      "payment policy"
     ],
     "format": "Explainer",
-    "category": "Corporate Treasury",
-    "unsplashQuery": "trading desk monitors professional",
+    "category": "Compliance",
+    "unsplashQuery": "security compliance audit meeting",
     "status": "completed",
     "priority": "high",
-    "searchVolDe": 900,
-    "kd": 20,
-    "searchVolEn": 900,
-    "targetLength": 1500,
+    "searchVolDe": 1000,
+    "kd": 23,
+    "searchVolEn": 1000,
+    "targetLength": 1600,
     "taSegments": [
-      "finance",
-      "founders"
+      "compliance",
+      "finance"
     ],
-    "plannedDate": "2026-09-14",
+    "plannedDate": "2026-09-22",
     "language": "EN",
-    "completedAt": "2026-09-10T12:43:55.068Z"
+    "completedAt": "2026-09-12T11:59:08.465Z"
   }
 ]

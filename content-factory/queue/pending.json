@@ -29,35 +29,6 @@
     "language": "EN"
   },
   {
-    "id": 8,
-    "cluster": "Compliance",
-    "slug": "aml-controls-for-crypto-invoice-payments",
-    "titleDe": "AML controls for crypto invoice payments: a practical control map",
-    "titleEn": "AML controls for crypto invoice payments: a practical control map",
-    "keywordDe": "AML crypto invoice payments",
-    "keywordEn": "AML crypto invoice payments",
-    "lsiKeywords": [
-      "transaction monitoring",
-      "sanctions screening",
-      "payment policy"
-    ],
-    "format": "Explainer",
-    "category": "Compliance",
-    "unsplashQuery": "security compliance audit meeting",
-    "status": "pending",
-    "priority": "high",
-    "searchVolDe": 1000,
-    "kd": 23,
-    "searchVolEn": 1000,
-    "targetLength": 1600,
-    "taSegments": [
-      "compliance",
-      "finance"
-    ],
-    "plannedDate": "2026-09-22",
-    "language": "EN"
-  },
-  {
     "id": 10,
     "cluster": "Ops Playbooks",
     "slug": "roles-and-approvals-for-business-crypto-payments",

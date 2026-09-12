@@ -8,6 +8,7 @@ Blog: https://cryp2bus.com/blog/
 ## Articles
 
 - [Accounting handoff for crypto settlements: evidence finance needs](https://cryp2bus.com/blog/accounting-handoff-for-crypto-settlements/)
+- [AML controls for crypto invoice payments: a practical control map](https://cryp2bus.com/blog/aml-controls-for-crypto-invoice-payments/)
 - [Corporate crypto treasury basics: wallets, conversion, and controls](https://cryp2bus.com/blog/corporate-crypto-treasury-basics/)
 - [Cross-border crypto settlement vs bank wires: cost, speed, and ops](https://cryp2bus.com/blog/cross-border-crypto-settlement-vs-bank-wires/)
 - [How to pay business invoices with USDT: a practical settlement checklist](https://cryp2bus.com/blog/how-to-pay-business-invoices-with-usdt/)
