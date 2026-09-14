@@ -1,34 +1,5 @@
 [
   {
-    "id": 6,
-    "cluster": "Cross-border Payments",
-    "slug": "multi-currency-invoice-settlement-with-crypto",
-    "titleDe": "Multi-currency invoice settlement with crypto: a corridor checklist",
-    "titleEn": "Multi-currency invoice settlement with crypto: a corridor checklist",
-    "keywordDe": "multi-currency crypto invoices",
-    "keywordEn": "multi-currency crypto invoices",
-    "lsiKeywords": [
-      "invoice corridor",
-      "FX vs stablecoin",
-      "supplier currency"
-    ],
-    "format": "Checklist",
-    "category": "Cross-border Payments",
-    "unsplashQuery": "world map business meeting",
-    "status": "pending",
-    "priority": "medium",
-    "searchVolDe": 800,
-    "kd": 18,
-    "searchVolEn": 800,
-    "targetLength": 1500,
-    "taSegments": [
-      "ops",
-      "partners"
-    ],
-    "plannedDate": "2026-09-18",
-    "language": "EN"
-  },
-  {
     "id": 10,
     "cluster": "Ops Playbooks",
     "slug": "roles-and-approvals-for-business-crypto-payments",
