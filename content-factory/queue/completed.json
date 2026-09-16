@@ -150,6 +150,36 @@
     "completedAt": "2026-09-16"
   },
   {
+    "id": 6,
+    "cluster": "Cross-border Payments",
+    "slug": "multi-currency-invoice-settlement-with-crypto",
+    "titleDe": "Multi-currency invoice settlement with crypto: a corridor checklist",
+    "titleEn": "Multi-currency invoice settlement with crypto: a corridor checklist",
+    "keywordDe": "multi-currency crypto invoices",
+    "keywordEn": "multi-currency crypto invoices",
+    "lsiKeywords": [
+      "invoice corridor",
+      "FX vs stablecoin",
+      "supplier currency"
+    ],
+    "format": "Checklist",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "world map business meeting",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 800,
+    "kd": 18,
+    "searchVolEn": 800,
+    "targetLength": 1500,
+    "taSegments": [
+      "ops",
+      "partners"
+    ],
+    "plannedDate": "2026-09-18",
+    "language": "EN",
+    "completedAt": "2026-09-18"
+  },
+  {
     "id": 7,
     "cluster": "Compliance",
     "slug": "kyb-for-business-crypto-accounts",
@@ -270,33 +300,33 @@
     "completedAt": "2026-10-06"
   },
   {
-    "id": 6,
-    "cluster": "Cross-border Payments",
-    "slug": "multi-currency-invoice-settlement-with-crypto",
-    "titleDe": "Multi-currency invoice settlement with crypto: a corridor checklist",
-    "titleEn": "Multi-currency invoice settlement with crypto: a corridor checklist",
-    "keywordDe": "multi-currency crypto invoices",
-    "keywordEn": "multi-currency crypto invoices",
+    "id": 10,
+    "cluster": "Ops Playbooks",
+    "slug": "roles-and-approvals-for-business-crypto-payments",
+    "titleDe": "Roles and approvals for business crypto payments: maker-checker design",
+    "titleEn": "Roles and approvals for business crypto payments: maker-checker design",
+    "keywordDe": "crypto payment approval workflow",
+    "keywordEn": "crypto payment approval workflow",
     "lsiKeywords": [
-      "invoice corridor",
-      "FX vs stablecoin",
-      "supplier currency"
+      "maker checker",
+      "payment roles",
+      "ops controls"
     ],
-    "format": "Checklist",
-    "category": "Cross-border Payments",
-    "unsplashQuery": "world map business meeting",
+    "format": "Howto",
+    "category": "Ops Playbooks",
+    "unsplashQuery": "team collaboration whiteboard office",
     "status": "completed",
     "priority": "medium",
-    "searchVolDe": 800,
-    "kd": 18,
-    "searchVolEn": 800,
+    "searchVolDe": 650,
+    "kd": 16,
+    "searchVolEn": 650,
     "targetLength": 1500,
     "taSegments": [
       "ops",
-      "partners"
+      "compliance"
     ],
-    "plannedDate": "2026-09-18",
+    "plannedDate": "2026-09-26",
     "language": "EN",
-    "completedAt": "2026-09-14T14:45:15.753Z"
+    "completedAt": "2026-09-16T13:10:25.207Z"
   }
 ]

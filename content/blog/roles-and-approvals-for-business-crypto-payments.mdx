@@ -1,0 +1,128 @@
+---
+title: "Roles and approvals for business crypto payments: maker-checker design"
+titleEn: "Roles and approvals for business crypto payments: maker-checker design"
+description: "Build a crypto payment approval workflow with maker-checker roles, thresholds, and audit trails for invoices, treasury, and cross-border settlement."
+descriptionEn: "Build a crypto payment approval workflow with maker-checker roles, thresholds, and audit trails for invoices, treasury, and cross-border settlement."
+datePublished: "2026-09-26"
+dateModified: "2026-09-26"
+author:
+  name: "Cryp2bus Editorial"
+  role: "Editorial"
+category: "Ops Playbooks"
+readTime: "8 min"
+coverImage: ""
+featured: false
+tags: ["crypto payment approval workflow", "Ops Playbooks", "business crypto", "2026"]
+tagsEn: ["crypto payment approval workflow", "Ops Playbooks", "business crypto", "2026"]
+faq:
+  - question: "What is a crypto payment approval workflow?"
+    answer: "A crypto payment approval workflow is a documented process that separates who can create a payment instruction (maker) from who can review and release it (checker), with defined thresholds, roles, and an audit trail. It exists to reduce error and fraud risk before funds move on-chain, where transactions are typically irreversible."
+  - question: "What is maker-checker in payments?"
+    answer: "Maker-checker (also called four-eyes review) is a control where one person prepares a payment and a different person independently verifies and approves it before execution. Neither role can complete the transaction alone, which limits the impact of a single compromised account or a single mistake."
+  - question: "How many approval levels does a crypto payment need?"
+    answer: "There is no universal number. Many businesses use two levels for routine supplier invoices and three or more for payments above a set threshold, treasury conversions, or new-counterparty wallets. Level count should match value at risk and destination risk, not just company size."
+  - question: "Who should hold wallet or platform admin rights in a payments team?"
+    answer: "Admin rights (adding signers, changing whitelists, adjusting thresholds) should sit with a small group separate from day-to-day makers and checkers, often finance leadership or a dedicated controls owner, with changes logged and reviewed periodically."
+  - question: "Can approval workflows fully prevent crypto payment fraud?"
+    answer: "No control eliminates risk. Maker-checker workflows, whitelisting, and audit logs reduce the likelihood and impact of error or fraud but do not guarantee against loss, especially if approvers collude, credentials are compromised, or destination verification is skipped."
+  - question: "Where should approval logs be stored for audit purposes?"
+    answer: "Approval logs — who initiated, who approved, timestamps, wallet destination, and supporting invoice reference — should be stored in a system separate from the payment platform itself, or exported regularly, so records survive platform changes and support external audit or KYB review."
+---
+
+Crypto payment approval workflow design is the practical answer to a simple operational problem: on-chain payments settle fast and are generally irreversible, so the controls that catch mistakes in a bank wire — recall requests, multi-day clearing, correspondent bank checks — mostly don't exist. A crypto payment approval workflow replaces that safety net with defined roles (maker, checker, approver), value-based thresholds, and a maker-checker structure so no single person can move company funds unilaterally.
+
+This matters whether you're paying a single supplier invoice in USDT or running recurring cross-border settlement through a corporate treasury desk. The rest of this guide walks through how to design roles, set thresholds, and document the process so it holds up under internal review and external audit.
+
+## Why crypto payments need stricter approval controls than bank transfers
+
+Traditional bank payments have several built-in delays and checks: batch cut-off times, correspondent bank screening, and in many corridors a window where a payment can still be recalled or queried. Crypto settlement compresses that timeline. Once a transaction is confirmed on-chain, reversing it typically requires the counterparty's cooperation — it is not a built-in feature of the network.
+
+That difference shifts the burden of error-prevention earlier in the process, before broadcast, rather than relying on post-send recovery. A crypto payment approval workflow is how you do that: it forces at least one independent review of the destination address, the amount, and the invoice reference before the transaction leaves your control.
+
+This is also relevant to how you [pay business invoices with USDT](/blog/how-to-pay-business-invoices-with-usdt/): the invoice-matching step and the approval step are related but distinct, and skipping either one increases the chance of paying the wrong amount, the wrong vendor, or a fraudulent address substituted during an email compromise.
+
+## Core roles in a maker-checker payment structure
+
+A functional approval workflow separates at least three responsibilities. Combining them defeats the purpose of the control.
+
+1. **Maker (initiator)** — prepares the payment: selects the invoice or treasury instruction, enters the amount and destination, attaches supporting documentation. The maker cannot release funds alone.
+2. **Checker (approver)** — independently reviews the maker's entry against the source invoice or instruction, verifies the destination address against a whitelist or prior record, and either approves or rejects.
+3. **Second approver (for high-value or new-counterparty payments)** — an additional reviewer required above a set threshold, often someone in finance leadership or treasury.
+4. **Admin / controls owner** — manages who holds maker and checker rights, sets thresholds, and reviews access logs periodically; this role does not typically initiate or approve day-to-day payments.
+5. **Compliance / KYB reviewer** — for new vendors or new payment corridors, confirms counterparty verification is on file before the first payment is allowed to enter the approval queue at all.
+
+Keeping these roles on different people — and, ideally, different devices or sessions — is the practical core of maker-checker design. It is the same logic used in traditional treasury systems, applied to a settlement rail where the "undo" button doesn't reliably exist.
+
+![Team reviewing payment approval workflow on laptops](https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200)
+
+## Setting thresholds: matching approval depth to payment risk
+
+Not every payment needs the same number of eyes. Threshold design should reflect both value and destination risk — a routine payment to a known, whitelisted supplier is different from a first-time payment to a new wallet in an unfamiliar corridor.
+
+| Payment type | Typical approval levels | Additional control |
+|---|---|---|
+| Routine invoice, known vendor, under internal cap | Maker + 1 checker | Address matched to prior payment history |
+| Invoice above internal cap | Maker + 2 checkers | Finance lead sign-off required |
+| New vendor, first payment | Maker + checker + compliance review | KYB or counterparty verification on file |
+| Treasury conversion (fiat–crypto) | Maker + treasury checker | Reference to [corporate crypto treasury basics](/blog/corporate-crypto-treasury-basics/) policy |
+| OTC-sized settlement | Maker + 2 checkers + desk confirmation | See [when businesses use OTC crypto desks](/blog/when-businesses-use-otc-crypto-desks/) |
+| Cross-border batch payment | Maker + checker + corridor review | Compare against [cross-border settlement vs bank wires](/blog/cross-border-crypto-settlement-vs-bank-wires/) |
+
+Thresholds should be documented in a written policy, not left to informal judgment, and revisited on a fixed schedule — quarterly is common for growing payment volumes.
+
+## Building the workflow: from invoice to settled payment
+
+A practical crypto payment approval workflow generally follows this sequence:
+
+1. **Invoice or instruction intake** — the source document (supplier invoice, treasury request) is logged with a reference number before any payment is prepared.
+2. **Maker entry** — the maker enters payment details into the platform, referencing the source document and destination address.
+3. **Destination verification** — the address is checked against a whitelist, or, for new destinations, verified through an independent channel (a callback to a known contact, not the invoice email).
+4. **Checker review** — a different person compares the entry to the source document, confirms the amount and destination, and approves or rejects with a reason.
+5. **Threshold escalation** — if the amount or counterparty status triggers a higher threshold, the payment routes to an additional approver automatically rather than by manual reminder.
+6. **Release and broadcast** — the payment executes only after all required approvals are recorded.
+7. **Post-payment logging** — transaction hash, approver identities, and timestamps are stored alongside the invoice reference for reconciliation and audit.
+8. **Accounting handoff** — the settled payment is matched to the ledger entry, with reference to applicable accounting treatment (see IFRS digital-asset materials at ifrs.org for general context on how entities discuss crypto-asset accounting).
+
+Each step should leave a record. If your platform does not log who approved what and when, that gap is itself a control weakness worth raising with your ops or compliance owner.
+
+## Common failure points in crypto payment approval workflows
+
+Approval workflows fail less often because of malicious actors and more often because of shortcuts under time pressure. Watch for these patterns:
+
+- **Role concentration** — one person holds both maker and checker credentials, often "temporarily" during a staff absence, and the exception becomes permanent.
+- **Whitelist skipping** — a checker approves a new destination address without an independent verification step, relying only on the invoice email.
+- **Threshold splitting** — a payment is broken into smaller amounts specifically to stay under an approval trigger. This should be flagged as a control violation, not treated as a workaround.
+- **Stale access rights** — former employees or contractors retain checker rights because offboarding didn't include payment-platform access review.
+- **Undocumented exceptions** — a payment is rushed through outside the normal workflow "just this once," with no written justification on file.
+
+None of these require sophisticated fraud to cause a loss; ordinary process drift is usually enough.
+
+## Risks and limits of maker-checker controls
+
+Maker-checker design reduces certain risks, but it does not eliminate them and it is not a substitute for broader compliance and security practices. A few limits worth stating plainly:
+
+- **Collusion risk.** If maker and checker roles are held by people who coordinate outside the system, the control's independence is defeated. Periodic role rotation and access review help but don't fully remove this risk.
+- **Credential compromise.** If an approver's account is taken over, the approval step itself can be exploited rather than bypassed. Strong authentication and session monitoring are complementary controls, not replacements.
+- **Social engineering.** Business email compromise attacks specifically target the invoice-to-payment handoff, sometimes altering a real invoice's destination address. Independent verification of new or changed addresses — outside the email thread — is one of the few controls that reliably catches this.
+- **On-chain irreversibility.** Even a well-run approval workflow cannot recall a broadcast transaction. The workflow's value is entirely in what it prevents before release, not in recovery afterward.
+- **No outcome guarantee.** A documented approval process supports internal control and audit readiness. It does not guarantee against loss, and it does not constitute legal, tax, or investment advice about how or whether to use crypto payment rails.
+
+For broader regulatory context on anti-money-laundering expectations that intersect with payment controls, see FATF's public guidance at fatf-gafi.org, and for EU businesses, official MiCA overview materials from EU institutions.
+
+## Practical checklist before you launch a crypto payment approval workflow
+
+Before rolling out or revising your workflow, confirm the following are in place and documented:
+
+1. Written policy defining maker, checker, and admin roles with no overlap for the same payment.
+2. Value-based thresholds with automatic escalation, not manual reminders.
+3. A destination-address whitelist process with independent verification for new or changed addresses.
+4. Audit logging that captures initiator, approver, timestamps, and invoice reference, exportable outside the payment platform.
+5. Offboarding procedure that removes payment-platform access on the employee's last working day, not on a delayed schedule.
+6. A documented exception process for urgent payments, requiring written sign-off rather than informal approval.
+7. Periodic access review (quarterly is a reasonable starting cadence) confirming role assignments still match current staffing.
+
+Treat this checklist as a starting baseline. Payment volume, corridor complexity, and vendor concentration will all push some businesses toward tighter thresholds than others.
+
+Open a Cryptobus business account to buy crypto, pay invoices, and settle cross-border.
+
+*This material is for informational and educational purposes only. It is not legal, tax, investment, or financial advice. Cryptocurrency transactions involve operational, market, and compliance risk. Outcomes depend on your policies, counterparties, corridors, and applicable law. Readers should verify primary sources and internal controls as of the action date.*

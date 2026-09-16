@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
   <loc>https://cryp2bus.com/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/"/>
@@ -11,7 +11,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/"/>
@@ -19,7 +19,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/exchange/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/exchange/"/>
@@ -27,7 +27,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/invoice-payments/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/invoice-payments/"/>
@@ -35,7 +35,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/otc/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/otc/"/>
@@ -43,7 +43,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/accounting-handoff-for-crypto-settlements/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/accounting-handoff-for-crypto-settlements/"/>
@@ -51,7 +51,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/aml-controls-for-crypto-invoice-payments/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/aml-controls-for-crypto-invoice-payments/"/>
@@ -59,7 +59,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/corporate-crypto-treasury-basics/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/corporate-crypto-treasury-basics/"/>
@@ -67,7 +67,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/cross-border-crypto-settlement-vs-bank-wires/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/cross-border-crypto-settlement-vs-bank-wires/"/>
@@ -75,7 +75,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/how-to-pay-business-invoices-with-usdt/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/how-to-pay-business-invoices-with-usdt/"/>
@@ -83,15 +83,23 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/kyb-for-business-crypto-accounts/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/kyb-for-business-crypto-accounts/"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://cryp2bus.com/blog/kyb-for-business-crypto-accounts/"/>
 </url>
 <url>
+  <loc>https://cryp2bus.com/blog/multi-currency-invoice-settlement-with-crypto/</loc>
+  <lastmod>2026-09-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/multi-currency-invoice-settlement-with-crypto/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://cryp2bus.com/blog/multi-currency-invoice-settlement-with-crypto/"/>
+</url>
+<url>
   <loc>https://cryp2bus.com/blog/pilot-checklist-accepting-crypto-for-b2b-invoices/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/pilot-checklist-accepting-crypto-for-b2b-invoices/"/>
@@ -99,7 +107,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/usdc-vs-usdt-for-supplier-payments/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/usdc-vs-usdt-for-supplier-payments/"/>
@@ -107,23 +115,23 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/blog/when-businesses-use-otc-crypto-desks/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/when-businesses-use-otc-crypto-desks/"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://cryp2bus.com/blog/when-businesses-use-otc-crypto-desks/"/>
 </url>
 <url>
-  <loc>https://cryp2bus.com/blog/multi-currency-invoice-settlement-with-crypto/</loc>
-  <lastmod>2026-09-18</lastmod>
+  <loc>https://cryp2bus.com/blog/roles-and-approvals-for-business-crypto-payments/</loc>
+  <lastmod>2026-09-26</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
-  <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/multi-currency-invoice-settlement-with-crypto/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://cryp2bus.com/blog/multi-currency-invoice-settlement-with-crypto/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/blog/roles-and-approvals-for-business-crypto-payments/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://cryp2bus.com/blog/roles-and-approvals-for-business-crypto-payments/"/>
 </url>
 <url>
   <loc>https://cryp2bus.com/markets/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/markets/"/>
@@ -131,7 +139,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/how-it-works/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/how-it-works/"/>
@@ -139,7 +147,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/pricing/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/pricing/"/>
@@ -147,7 +155,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/security/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/security/"/>
@@ -155,7 +163,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/about/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/about/"/>
@@ -163,7 +171,7 @@
 </url>
 <url>
   <loc>https://cryp2bus.com/faq/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
   <xhtml:link rel="alternate" hreflang="en" href="https://cryp2bus.com/faq/"/>
