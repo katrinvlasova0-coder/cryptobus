@@ -1,34 +1,5 @@
 [
   {
-    "id": 11,
-    "cluster": "Invoice Settlement",
-    "slug": "invoice-reference-fields-for-crypto-payments",
-    "titleDe": "Invoice reference fields for crypto payments: what to put on the bill",
-    "titleEn": "Invoice reference fields for crypto payments: what to put on the bill",
-    "keywordDe": "crypto payment invoice fields",
-    "keywordEn": "crypto payment invoice fields",
-    "lsiKeywords": [
-      "payment memo",
-      "invoice number crypto",
-      "settlement reference"
-    ],
-    "format": "Howto",
-    "category": "Invoice Settlement",
-    "unsplashQuery": "printed invoice pen desk",
-    "status": "pending",
-    "priority": "medium",
-    "searchVolDe": 500,
-    "kd": 14,
-    "searchVolEn": 500,
-    "targetLength": 1400,
-    "taSegments": [
-      "ops",
-      "accountants"
-    ],
-    "plannedDate": "2026-09-28",
-    "language": "EN"
-  },
-  {
     "id": 12,
     "cluster": "Corporate Treasury",
     "slug": "converting-fiat-to-crypto-for-supplier-payouts",
