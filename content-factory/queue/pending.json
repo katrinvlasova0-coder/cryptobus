@@ -1,34 +1,5 @@
 [
   {
-    "id": 12,
-    "cluster": "Corporate Treasury",
-    "slug": "converting-fiat-to-crypto-for-supplier-payouts",
-    "titleDe": "Converting fiat to crypto for supplier payouts: timing and quotes",
-    "titleEn": "Converting fiat to crypto for supplier payouts: timing and quotes",
-    "keywordDe": "fiat to crypto supplier payout",
-    "keywordEn": "fiat to crypto supplier payout",
-    "lsiKeywords": [
-      "buy crypto for business",
-      "indicative quote",
-      "payout window"
-    ],
-    "format": "Explainer",
-    "category": "Corporate Treasury",
-    "unsplashQuery": "currency exchange finance workspace",
-    "status": "pending",
-    "priority": "medium",
-    "searchVolDe": 850,
-    "kd": 19,
-    "searchVolEn": 850,
-    "targetLength": 1500,
-    "taSegments": [
-      "finance",
-      "ops"
-    ],
-    "plannedDate": "2026-09-30",
-    "language": "EN"
-  },
-  {
     "id": 13,
     "cluster": "Cross-border Payments",
     "slug": "weekend-and-holiday-settlement-with-stablecoins",

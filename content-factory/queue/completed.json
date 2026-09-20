@@ -300,6 +300,36 @@
     "completedAt": "2026-09-26"
   },
   {
+    "id": 11,
+    "cluster": "Invoice Settlement",
+    "slug": "invoice-reference-fields-for-crypto-payments",
+    "titleDe": "Invoice reference fields for crypto payments: what to put on the bill",
+    "titleEn": "Invoice reference fields for crypto payments: what to put on the bill",
+    "keywordDe": "crypto payment invoice fields",
+    "keywordEn": "crypto payment invoice fields",
+    "lsiKeywords": [
+      "payment memo",
+      "invoice number crypto",
+      "settlement reference"
+    ],
+    "format": "Howto",
+    "category": "Invoice Settlement",
+    "unsplashQuery": "printed invoice pen desk",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 500,
+    "kd": 14,
+    "searchVolEn": 500,
+    "targetLength": 1400,
+    "taSegments": [
+      "ops",
+      "accountants"
+    ],
+    "plannedDate": "2026-09-28",
+    "language": "EN",
+    "completedAt": "2026-09-28"
+  },
+  {
     "id": 15,
     "cluster": "Ops Playbooks",
     "slug": "pilot-checklist-accepting-crypto-for-b2b-invoices",
@@ -330,33 +360,33 @@
     "completedAt": "2026-10-06"
   },
   {
-    "id": 11,
-    "cluster": "Invoice Settlement",
-    "slug": "invoice-reference-fields-for-crypto-payments",
-    "titleDe": "Invoice reference fields for crypto payments: what to put on the bill",
-    "titleEn": "Invoice reference fields for crypto payments: what to put on the bill",
-    "keywordDe": "crypto payment invoice fields",
-    "keywordEn": "crypto payment invoice fields",
+    "id": 12,
+    "cluster": "Corporate Treasury",
+    "slug": "converting-fiat-to-crypto-for-supplier-payouts",
+    "titleDe": "Converting fiat to crypto for supplier payouts: timing and quotes",
+    "titleEn": "Converting fiat to crypto for supplier payouts: timing and quotes",
+    "keywordDe": "fiat to crypto supplier payout",
+    "keywordEn": "fiat to crypto supplier payout",
     "lsiKeywords": [
-      "payment memo",
-      "invoice number crypto",
-      "settlement reference"
+      "buy crypto for business",
+      "indicative quote",
+      "payout window"
     ],
-    "format": "Howto",
-    "category": "Invoice Settlement",
-    "unsplashQuery": "printed invoice pen desk",
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "currency exchange finance workspace",
     "status": "completed",
     "priority": "medium",
-    "searchVolDe": 500,
-    "kd": 14,
-    "searchVolEn": 500,
-    "targetLength": 1400,
+    "searchVolDe": 850,
+    "kd": 19,
+    "searchVolEn": 850,
+    "targetLength": 1500,
     "taSegments": [
-      "ops",
-      "accountants"
+      "finance",
+      "ops"
     ],
-    "plannedDate": "2026-09-28",
+    "plannedDate": "2026-09-30",
     "language": "EN",
-    "completedAt": "2026-09-18T12:44:36.086Z"
+    "completedAt": "2026-09-20T12:52:49.896Z"
   }
 ]
