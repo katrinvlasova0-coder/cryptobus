@@ -31,20 +31,43 @@ function hreflang(url: string): SitemapEntry['xhtml:link'] {
   ];
 }
 
+/**
+ * SPA routes that exist in App.jsx but are not prerendered.
+ * GitHub Pages returns HTTP 404 (homepage shell, canonical → /) for these.
+ * Keep them out of the sitemap until dist/<path>/index.html is emitted.
+ */
+export const UNPRERENDERED_SPA_PATHS = [
+  '/exchange/',
+  '/invoice-payments/',
+  '/otc/',
+  '/markets/',
+  '/how-it-works/',
+  '/pricing/',
+  '/security/',
+  '/about/',
+  '/faq/',
+] as const;
+
+function pathnameOf(loc: string): string {
+  const base = getBaseUrl();
+  let pathname = loc.startsWith(base) ? loc.slice(base.length) : loc;
+  if (!pathname.startsWith('/')) pathname = `/${pathname}`;
+  if (pathname.length > 1 && !pathname.endsWith('/')) pathname = `${pathname}/`;
+  return pathname || '/';
+}
+
+/** Homepage, /blog/, and /blog/{slug}/ only. Those are the URLs with real static HTML. */
+export function isIndexableSitemapLoc(loc: string): boolean {
+  const pathname = pathnameOf(loc);
+  if (pathname === '/' || pathname === '/blog/') return true;
+  return /^\/blog\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/.test(pathname);
+}
+
 function staticEntries(lastmod: string): SitemapEntry[] {
   const BASE_URL = getBaseUrl();
   const paths: Array<{ path: string; changefreq: SitemapEntry['changefreq']; priority: string }> = [
     { path: '/', changefreq: 'weekly', priority: '1.0' },
     { path: '/blog/', changefreq: 'daily', priority: '0.8' },
-    { path: '/exchange/', changefreq: 'weekly', priority: '0.7' },
-    { path: '/invoice-payments/', changefreq: 'weekly', priority: '0.7' },
-    { path: '/otc/', changefreq: 'weekly', priority: '0.7' },
-    { path: '/markets/', changefreq: 'weekly', priority: '0.6' },
-    { path: '/how-it-works/', changefreq: 'weekly', priority: '0.6' },
-    { path: '/pricing/', changefreq: 'weekly', priority: '0.6' },
-    { path: '/security/', changefreq: 'monthly', priority: '0.5' },
-    { path: '/about/', changefreq: 'monthly', priority: '0.5' },
-    { path: '/faq/', changefreq: 'monthly', priority: '0.5' },
   ];
 
   return paths.map(({ path: pagePath, changefreq, priority }) => {
@@ -95,6 +118,10 @@ function readSitemap(): { urlset: { url: SitemapEntry[] } } {
 }
 
 function writeSitemap(sitemap: { urlset: { url: SitemapEntry[] } }): void {
+  sitemap.urlset.url = sitemap.urlset.url.filter((entry) =>
+    isIndexableSitemapLoc(String(entry.loc ?? '')),
+  );
+
   const SITEMAP_PATH = getSitemapPath();
   const builder = new XMLBuilder({
     ignoreAttributes: false,
