@@ -12,6 +12,7 @@
     "fallback": "tsx src/index.ts fallback",
     "test:compliance": "tsx src/compliance-patterns.test.ts",
     "test:fallback": "tsx src/safe-fallback.test.ts",
+    "test:sitemap": "tsx src/sitemap.test.ts",
     "mock": "tsx src/index.ts mock",
     "queue:list": "tsx src/index.ts queue list",
     "queue:add": "tsx src/index.ts queue add"
