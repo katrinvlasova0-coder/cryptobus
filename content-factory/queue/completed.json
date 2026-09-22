@@ -330,6 +330,36 @@
     "completedAt": "2026-09-28"
   },
   {
+    "id": 12,
+    "cluster": "Corporate Treasury",
+    "slug": "converting-fiat-to-crypto-for-supplier-payouts",
+    "titleDe": "Converting fiat to crypto for supplier payouts: timing and quotes",
+    "titleEn": "Converting fiat to crypto for supplier payouts: timing and quotes",
+    "keywordDe": "fiat to crypto supplier payout",
+    "keywordEn": "fiat to crypto supplier payout",
+    "lsiKeywords": [
+      "buy crypto for business",
+      "indicative quote",
+      "payout window"
+    ],
+    "format": "Explainer",
+    "category": "Corporate Treasury",
+    "unsplashQuery": "currency exchange finance workspace",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 850,
+    "kd": 19,
+    "searchVolEn": 850,
+    "targetLength": 1500,
+    "taSegments": [
+      "finance",
+      "ops"
+    ],
+    "plannedDate": "2026-09-30",
+    "language": "EN",
+    "completedAt": "2026-09-30"
+  },
+  {
     "id": 15,
     "cluster": "Ops Playbooks",
     "slug": "pilot-checklist-accepting-crypto-for-b2b-invoices",
@@ -360,33 +390,33 @@
     "completedAt": "2026-10-06"
   },
   {
-    "id": 12,
-    "cluster": "Corporate Treasury",
-    "slug": "converting-fiat-to-crypto-for-supplier-payouts",
-    "titleDe": "Converting fiat to crypto for supplier payouts: timing and quotes",
-    "titleEn": "Converting fiat to crypto for supplier payouts: timing and quotes",
-    "keywordDe": "fiat to crypto supplier payout",
-    "keywordEn": "fiat to crypto supplier payout",
+    "id": 13,
+    "cluster": "Cross-border Payments",
+    "slug": "weekend-and-holiday-settlement-with-stablecoins",
+    "titleDe": "Weekend and holiday settlement with stablecoins: ops realities",
+    "titleEn": "Weekend and holiday settlement with stablecoins: ops realities",
+    "keywordDe": "weekend stablecoin settlement",
+    "keywordEn": "weekend stablecoin settlement",
     "lsiKeywords": [
-      "buy crypto for business",
-      "indicative quote",
-      "payout window"
+      "holiday payments",
+      "24/7 settlement",
+      "bank cutoff"
     ],
     "format": "Explainer",
-    "category": "Corporate Treasury",
-    "unsplashQuery": "currency exchange finance workspace",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "calendar clock business planning",
     "status": "completed",
     "priority": "medium",
-    "searchVolDe": 850,
-    "kd": 19,
-    "searchVolEn": 850,
-    "targetLength": 1500,
+    "searchVolDe": 400,
+    "kd": 12,
+    "searchVolEn": 400,
+    "targetLength": 1400,
     "taSegments": [
-      "finance",
-      "ops"
+      "ops",
+      "partners"
     ],
-    "plannedDate": "2026-09-30",
+    "plannedDate": "2026-10-02",
     "language": "EN",
-    "completedAt": "2026-09-20T12:52:49.896Z"
+    "completedAt": "2026-09-22T13:08:02.408Z"
   }
 ]

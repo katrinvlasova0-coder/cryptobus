@@ -19,6 +19,7 @@ Blog: https://cryp2bus.com/blog/
 - [Pilot checklist: accepting crypto for B2B invoices in 30 days](https://cryp2bus.com/blog/pilot-checklist-accepting-crypto-for-b2b-invoices/)
 - [Roles and approvals for business crypto payments: maker-checker design](https://cryp2bus.com/blog/roles-and-approvals-for-business-crypto-payments/)
 - [USDC vs USDT for supplier payments: what finance teams compare](https://cryp2bus.com/blog/usdc-vs-usdt-for-supplier-payments/)
+- [Weekend and holiday settlement with stablecoins: ops realities](https://cryp2bus.com/blog/weekend-and-holiday-settlement-with-stablecoins/)
 - [When businesses use OTC crypto desks instead of public exchanges](https://cryp2bus.com/blog/when-businesses-use-otc-crypto-desks/)
 
 ## Contact

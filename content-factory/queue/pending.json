@@ -1,34 +1,5 @@
 [
   {
-    "id": 13,
-    "cluster": "Cross-border Payments",
-    "slug": "weekend-and-holiday-settlement-with-stablecoins",
-    "titleDe": "Weekend and holiday settlement with stablecoins: ops realities",
-    "titleEn": "Weekend and holiday settlement with stablecoins: ops realities",
-    "keywordDe": "weekend stablecoin settlement",
-    "keywordEn": "weekend stablecoin settlement",
-    "lsiKeywords": [
-      "holiday payments",
-      "24/7 settlement",
-      "bank cutoff"
-    ],
-    "format": "Explainer",
-    "category": "Cross-border Payments",
-    "unsplashQuery": "calendar clock business planning",
-    "status": "pending",
-    "priority": "medium",
-    "searchVolDe": 400,
-    "kd": 12,
-    "searchVolEn": 400,
-    "targetLength": 1400,
-    "taSegments": [
-      "ops",
-      "partners"
-    ],
-    "plannedDate": "2026-10-02",
-    "language": "EN"
-  },
-  {
     "id": 14,
     "cluster": "Compliance",
     "slug": "restricted-corridors-and-business-crypto-payments",
