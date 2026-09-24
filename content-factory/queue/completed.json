@@ -360,6 +360,36 @@
     "completedAt": "2026-09-30"
   },
   {
+    "id": 13,
+    "cluster": "Cross-border Payments",
+    "slug": "weekend-and-holiday-settlement-with-stablecoins",
+    "titleDe": "Weekend and holiday settlement with stablecoins: ops realities",
+    "titleEn": "Weekend and holiday settlement with stablecoins: ops realities",
+    "keywordDe": "weekend stablecoin settlement",
+    "keywordEn": "weekend stablecoin settlement",
+    "lsiKeywords": [
+      "holiday payments",
+      "24/7 settlement",
+      "bank cutoff"
+    ],
+    "format": "Explainer",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "calendar clock business planning",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 400,
+    "kd": 12,
+    "searchVolEn": 400,
+    "targetLength": 1400,
+    "taSegments": [
+      "ops",
+      "partners"
+    ],
+    "plannedDate": "2026-10-02",
+    "language": "EN",
+    "completedAt": "2026-10-02"
+  },
+  {
     "id": 15,
     "cluster": "Ops Playbooks",
     "slug": "pilot-checklist-accepting-crypto-for-b2b-invoices",
@@ -390,33 +420,33 @@
     "completedAt": "2026-10-06"
   },
   {
-    "id": 13,
-    "cluster": "Cross-border Payments",
-    "slug": "weekend-and-holiday-settlement-with-stablecoins",
-    "titleDe": "Weekend and holiday settlement with stablecoins: ops realities",
-    "titleEn": "Weekend and holiday settlement with stablecoins: ops realities",
-    "keywordDe": "weekend stablecoin settlement",
-    "keywordEn": "weekend stablecoin settlement",
+    "id": 14,
+    "cluster": "Compliance",
+    "slug": "restricted-corridors-and-business-crypto-payments",
+    "titleDe": "Restricted corridors and business crypto payments: how to screen early",
+    "titleEn": "Restricted corridors and business crypto payments: how to screen early",
+    "keywordDe": "restricted countries crypto payments",
+    "keywordEn": "restricted countries crypto payments",
     "lsiKeywords": [
-      "holiday payments",
-      "24/7 settlement",
-      "bank cutoff"
+      "sanctions corridor",
+      "geo restrictions",
+      "payment eligibility"
     ],
-    "format": "Explainer",
-    "category": "Cross-border Payments",
-    "unsplashQuery": "calendar clock business planning",
+    "format": "Checklist",
+    "category": "Compliance",
+    "unsplashQuery": "world map pins travel compliance",
     "status": "completed",
     "priority": "medium",
-    "searchVolDe": 400,
-    "kd": 12,
-    "searchVolEn": 400,
-    "targetLength": 1400,
+    "searchVolDe": 600,
+    "kd": 18,
+    "searchVolEn": 600,
+    "targetLength": 1500,
     "taSegments": [
-      "ops",
-      "partners"
+      "compliance",
+      "ops"
     ],
-    "plannedDate": "2026-10-02",
+    "plannedDate": "2026-10-04",
     "language": "EN",
-    "completedAt": "2026-09-22T13:08:02.408Z"
+    "completedAt": "2026-09-24T13:14:44.135Z"
   }
 ]

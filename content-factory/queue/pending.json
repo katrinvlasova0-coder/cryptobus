@@ -1,34 +1,5 @@
 [
   {
-    "id": 14,
-    "cluster": "Compliance",
-    "slug": "restricted-corridors-and-business-crypto-payments",
-    "titleDe": "Restricted corridors and business crypto payments: how to screen early",
-    "titleEn": "Restricted corridors and business crypto payments: how to screen early",
-    "keywordDe": "restricted countries crypto payments",
-    "keywordEn": "restricted countries crypto payments",
-    "lsiKeywords": [
-      "sanctions corridor",
-      "geo restrictions",
-      "payment eligibility"
-    ],
-    "format": "Checklist",
-    "category": "Compliance",
-    "unsplashQuery": "world map pins travel compliance",
-    "status": "pending",
-    "priority": "medium",
-    "searchVolDe": 600,
-    "kd": 18,
-    "searchVolEn": 600,
-    "targetLength": 1500,
-    "taSegments": [
-      "compliance",
-      "ops"
-    ],
-    "plannedDate": "2026-10-04",
-    "language": "EN"
-  },
-  {
     "id": 16,
     "cluster": "Invoice Settlement",
     "slug": "partial-payments-and-overpayments-in-crypto-invoices",
