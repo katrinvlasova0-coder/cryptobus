@@ -390,6 +390,36 @@
     "completedAt": "2026-10-02"
   },
   {
+    "id": 14,
+    "cluster": "Compliance",
+    "slug": "restricted-corridors-and-business-crypto-payments",
+    "titleDe": "Restricted corridors and business crypto payments: how to screen early",
+    "titleEn": "Restricted corridors and business crypto payments: how to screen early",
+    "keywordDe": "restricted countries crypto payments",
+    "keywordEn": "restricted countries crypto payments",
+    "lsiKeywords": [
+      "sanctions corridor",
+      "geo restrictions",
+      "payment eligibility"
+    ],
+    "format": "Checklist",
+    "category": "Compliance",
+    "unsplashQuery": "world map pins travel compliance",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 600,
+    "kd": 18,
+    "searchVolEn": 600,
+    "targetLength": 1500,
+    "taSegments": [
+      "compliance",
+      "ops"
+    ],
+    "plannedDate": "2026-10-04",
+    "language": "EN",
+    "completedAt": "2026-10-04"
+  },
+  {
     "id": 15,
     "cluster": "Ops Playbooks",
     "slug": "pilot-checklist-accepting-crypto-for-b2b-invoices",
@@ -420,33 +450,33 @@
     "completedAt": "2026-10-06"
   },
   {
-    "id": 14,
-    "cluster": "Compliance",
-    "slug": "restricted-corridors-and-business-crypto-payments",
-    "titleDe": "Restricted corridors and business crypto payments: how to screen early",
-    "titleEn": "Restricted corridors and business crypto payments: how to screen early",
-    "keywordDe": "restricted countries crypto payments",
-    "keywordEn": "restricted countries crypto payments",
+    "id": 18,
+    "cluster": "Cross-border Payments",
+    "slug": "supplier-onboarding-for-crypto-settlement",
+    "titleDe": "Supplier onboarding for crypto settlement: questions to ask first",
+    "titleEn": "Supplier onboarding for crypto settlement: questions to ask first",
+    "keywordDe": "supplier crypto settlement onboarding",
+    "keywordEn": "supplier crypto settlement onboarding",
     "lsiKeywords": [
-      "sanctions corridor",
-      "geo restrictions",
-      "payment eligibility"
+      "vendor crypto payment",
+      "wallet details",
+      "supplier KYC"
     ],
     "format": "Checklist",
-    "category": "Compliance",
-    "unsplashQuery": "world map pins travel compliance",
+    "category": "Cross-border Payments",
+    "unsplashQuery": "handshake business meeting suppliers",
     "status": "completed",
     "priority": "medium",
-    "searchVolDe": 600,
-    "kd": 18,
-    "searchVolEn": 600,
+    "searchVolDe": 550,
+    "kd": 15,
+    "searchVolEn": 550,
     "targetLength": 1500,
     "taSegments": [
-      "compliance",
+      "partners",
       "ops"
     ],
-    "plannedDate": "2026-10-04",
+    "plannedDate": "2026-10-12",
     "language": "EN",
-    "completedAt": "2026-09-24T13:14:44.135Z"
+    "completedAt": "2026-09-26T12:41:24.818Z"
   }
 ]

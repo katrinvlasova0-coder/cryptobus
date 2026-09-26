@@ -57,35 +57,6 @@
     "language": "EN"
   },
   {
-    "id": 18,
-    "cluster": "Cross-border Payments",
-    "slug": "supplier-onboarding-for-crypto-settlement",
-    "titleDe": "Supplier onboarding for crypto settlement: questions to ask first",
-    "titleEn": "Supplier onboarding for crypto settlement: questions to ask first",
-    "keywordDe": "supplier crypto settlement onboarding",
-    "keywordEn": "supplier crypto settlement onboarding",
-    "lsiKeywords": [
-      "vendor crypto payment",
-      "wallet details",
-      "supplier KYC"
-    ],
-    "format": "Checklist",
-    "category": "Cross-border Payments",
-    "unsplashQuery": "handshake business meeting suppliers",
-    "status": "pending",
-    "priority": "medium",
-    "searchVolDe": 550,
-    "kd": 15,
-    "searchVolEn": 550,
-    "targetLength": 1500,
-    "taSegments": [
-      "partners",
-      "ops"
-    ],
-    "plannedDate": "2026-10-12",
-    "language": "EN"
-  },
-  {
     "id": 19,
     "cluster": "Compliance",
     "slug": "travel-rule-basics-for-business-crypto-transfers",
